@@ -76,34 +76,33 @@
 
     <h3>Patient Details Functionality</h3>
     <p>
-        This page is so far the one that we worked the most. The design is based on existing documents that Glen
+        This page is so far the one that we have worked the most. The design is based on existing documents that Glen
         created with the collaboration of Nuala and Colin, I believe. The top section contains the most relevant patient
         details, a chart on the top-right displays the HbA1c results for
-        a given time. Also, a set of main metrics are displayed so the user can easily gather most of the relevant
-        information very quickly.<br>
+        a given time. A set of main metrics are displayed so the clinician can easily find the most relevant
+        information quickly.<br>
         The page comprises another five sections: Patient Details, Initial Patient Education, Ongoing Management,
         Outpatient Appointments and Annual Review. As mentioned before, there is not functionality built yet in these
-        sections. I envisage that substantial changes will take place once we get feedback.
+        sections, the page displays example of the envisaged elements of this sections but there are not functions for
+        amending or adding new records.
     </p>
 
     <h3>Some Aspect To Discuss</h3>
     <ul>
         <li>List of main metrics</li>
         <li>Metric thresholds</li>
-        <li>Section discussion</li>
+        <li>Section design/functionality discussion</li>
     </ul>
     <h3>Next Step</h3>
     <p>
-        At this stage there are not more pages to demonstrate. These comments are rendered only the first time a page is open for
-        the life time of a session. If you want to see them again, please, close the browser completely. If you open the page
-        again in a new browser instance, the comments should be displayed again.<br/><br/>
+        There are not more pages to demonstrate in this release.<br/><br/>
         <b>
             Please, give me as much feedback as possible: questions, suggestions and critics are all welcome. And don't assume
-            anything, in case of doubt, please ask.
+            anything, in case of doubt, please ask, thanks.
         </b>
     </p>
     <small style="font-size: .8em; float: right">
-        Comments updated on 21-Aug-2013 - v 0.01
+        Comments updated on 22-Aug-2013 - v 0.01
     </small>
 </div>
 
