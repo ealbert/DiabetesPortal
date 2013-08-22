@@ -77,8 +77,8 @@
 
     <h3>Patient Search Functionality</h3>
     <p>
-        The user can enter some criteria to query the database so the system can return a list patient records that contain
-        a link so the user can navigate to the patient details page.
+        In this web page the user can enter some criteria to query the database for patients.The application
+        returns a list of patient records and the user can click on a link to bring up the patient's detail web page.
     </p>
     <h3>Some Aspect To Discuss</h3>
     <ul>
@@ -89,11 +89,12 @@
     </ul>
     <h3>Next Step</h3>
     <p>
-        Currently the search function does not work, just press the Find button and then click on the MRN field for
-        the record that is returned, so the browser will open the Patient Details screen.
+        Currently the search function does not work, instead the application returns always the same patient record,
+        regardless the entered criteria values. Just press the Find button and then click on the MRN field for
+        the record that is returned, then the browser will open the Patient Details web page.
     </p>
     <small style="font-size: .8em; float: right">
-        Comments updated on 21-Aug-2013 - v 0.01
+        Comments updated on 22-Aug-2013 - v 0.01
     </small>
 </div>
 </body>

@@ -50,8 +50,7 @@
         </hgroup>
         <fieldset>
         <p>
-            This page could become a short of dashboard panel for the user or maybe a summary of
-            some sort of information.
+            This page could become a short of dashboard/summary panel for the user.
         </p>
         <p>
             The page should also include a comprehensive section in regards disclaimers, rules,
@@ -94,22 +93,25 @@
 
     <h3>Home Page Functionality</h3>
     <p>
-        Once the user is authenticated, the Home Page is displayed. All pages have a similar structure, some
-        header generic information on the top that displays the user name and other basic details. It also
-        provides a link so the user can logout if needed. Then a menu bar is render that contains the functions available
-        to the user depending on which roles is assigned to. Currently only the Patient>Search menu works.
+        Once the user is authenticated, the user is taken to the Home Page.<br/>
+        All pages, for the moment, have a similar design/aspect, on the top section, some
+        header generic information that displays the user name and other basic details is rendered. Also
+        a link is available so the user can logout if needed, the link takes the user back to the login web page.
+        Then a menu bar contains some of the main functions:  Search Patient, Add New Patient and so on, we need to discuss
+        what menus need to be added in this section. Currently only the Patient>Search menu works.
     </p>
 
     <h3>Some Aspect To Discuss</h3>
     <ul>
         <li>Define content for this page</li>
+        <li>List of main menus/actions</li>
     </ul>
     <h3>Next Step</h3>
     <p>
         Select the Search option under the Patient menu.
     </p>
     <small style="font-size: .8em; float: right">
-        Comments updated on 21-Aug-2013 - v 0.01
+        Comments updated on 22-Aug-2013 - v 0.01
     </small>
 </div>
 </body>

@@ -120,22 +120,23 @@
     <p>
         <!--<span class="ui-icon ui-icon-circle-check" style="float: left; margin: 0 7px 50px 0;"></span>-->
         The current version of the web site comprises four web pages: Login, Home Page, Patient Search and Patient
-        Details pages. The purpose at this stage is to provide a sort of baseline to help in the definition of
-        what functionality is required and how is prioritised. The screens provide an insight of how we intent
-        the screens to work but currently they don't provide any functionality or very little.<br/>
-        At this stage, the available pages are sufficient to discuss the process a user will follow to start
-        the application, find a patient and enquiry some patient details. But so far, there is not functionality
-        developed that will demonstrate how records are created or amended.
+        Details. The purpose of this release is to provide a sort of baseline to help in the definition of
+        the functional requirements, scope and prioritisation. The screens provide an insight of how we intent
+        the application to work, but in this release, the web pages have very little functionality in relation to amend or create
+        new records.<br/>
+        Nevertheless, the available pages are sufficient to discuss the process a user will follow to start
+        the application, find a patient and enquiry some patient details. The key aspect at this stage in the project is to develop
+        in short iterations and trying to gather as much feedback as possible from the stakeholders,
+        doing so we ensure that the development does not waist time working on unwanted functionality or/and not focusing
+        on the high priority aspects of the application.
     </p>
 
     <h3>Login Functionality</h3>
 
     <p>
-        When the user access the web site for the first time, this screen requires the user to enter user id and
-        password.
-        Once the user is authenticated, the user is taken to the home page. Currently the screen does not validate any
-        input
-        so pressing in the login button takes to the following screen.
+        When the user access the web site for the first time, the login web page requires the user to enter a user id and
+        password. Once the user is authenticated, the user is taken to the home page. Currently the login web page does not validate any
+        input, so just pressing in the login button in this release takes the user to the following web page.
     </p>
 
     <h3>Some Aspect To Discuss</h3>
@@ -150,7 +151,7 @@
         Click on the login button to access to the Home Page
     </p>
     <small style="font-size: .8em; float: right">
-        Comments updated on 21-Aug-2013 - v 0.01
+        Comments updated on 22-Aug-2013 - v 0.01
     </small>
 </div>
 </body>
