@@ -1,0 +1,44 @@
+/*
+	Reset css
+	Description: Styles for the site
+*/
+
+/***** Header *****/
+header#banner.body h4{
+    margin-bottom: .2em;
+}
+/***** Global *****/
+label.field{
+    width: 100px;
+    float: left;
+    font-weight: bold;
+}
+fieldset p {
+    clear: both;
+    padding: 5px;
+}
+
+input.textbox-300{
+    width: 300px;
+    float: left;
+}
+
+
+fieldset div.patientDetailsCol-Left input{
+    border-radius: 5px;
+    margin-bottom: 3px;
+    padding: 2px;
+}
+
+fieldset div.patientDetailsCol-Left{
+    float: left;
+    margin-right: 1em;
+}
+
+table#patientDetails {margin: .5em auto .5em auto; width: 98%;}
+
+section#metrics ul { border: none !important; border-collapse: separate; border-spacing: .25em; margin: 0 0 0 -.25em; }
+/*section#metrics li { background: #767676 !important; display: table-cell; vertical-align: middle; position: relative; border-radius: 5px 0; text-align: center; color: white; padding: 0 !important; width: 5em; height: 3em; padding: .25em !important; line-height: .9; text-transform: uppercase; }*/
+section#metrics li { background: #767676 !important; display: inline-block; float: left; vertical-align: middle; border-radius: 5px 0; text-align: center; color: white; width: 5.3em; height: 4em; padding: .25em !important; line-height: .9; text-transform: uppercase; margin-right: 5px; }
+section#metrics p {font-size: 18px; font-weight: bold; }
+

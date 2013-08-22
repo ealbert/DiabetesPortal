@@ -1,0 +1,99 @@
+/*
+	Reset css
+	Description: Styles for all the sections in the patient details page
+*/
+
+/*** Section Styles ***/
+.toggler {
+    background: #000305;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto 0.3em auto;
+    padding: 0;
+    text-align: center;
+    color: white;
+    width: 1024px;
+
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.toggler:hover{
+    cursor: pointer; cursor: hand;
+}
+
+/* Toggler Icon */
+.toggler .closed{
+    background: url('../Images/toggle_plus.png') center;
+    float: right;
+    height: 30px;
+    width: 30px;
+}
+
+.toggler .open{
+    background: url('../Images/toggle_minus.png') center;
+    float: right;
+    height: 30px;
+    width: 30px;
+}
+
+/* Column Design */
+input.leftCol{
+    width: 80%;
+    float: left;
+}
+
+input.rightCol{
+    float: right;
+    width: 60px;
+}
+
+input.rightCol:focus{
+    outline: 1px solid darkgrey;
+}
+
+/* Submit Button */
+input.rightCol[type='submit'] {
+    border-radius: 5px;
+    padding: .3em 1.3em;
+    float: right;
+    width: auto;
+}
+
+/* Patient Logs*/
+.sectionLog tbody td{
+    padding: 0;
+}
+
+.sectionLog thead td{
+    font-weight: bold;
+    border-bottom-style: solid;
+    border-width: 2px;
+}
+
+/* Detail Section */
+#sectionDetails-details input[type="radio"]{
+    display: inline-block;
+}
+
+#transfer_details{
+    float: right;
+    width: auto;
+    border-color: #000000;
+    border: 2px;
+    border-radius: 5px;
+    border-style: groove;
+}
+
+fieldset .withBorder{
+    border-color: #000000;
+    border: 2px;
+    border-radius: 5px;
+    border-style: groove;
+}
+
+.grey-row{
+    background-color: lightgrey;
+}
