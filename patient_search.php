@@ -28,7 +28,7 @@
 
     <section style="float:right; text-align: right; font-size: 12px;">
         Joe Bloggs MCN: 23454 <a href="index.php">logout</a> <br/>
-        Our Ladys Childresn Hospital Crumlin<br/>
+        Our Ladys Children's Hospital Crumlin<br/>
         Wednesday 15th July 2013
     </section>
     <section>
@@ -80,7 +80,7 @@
         In this web page the user can enter some criteria to query the database for patients.The application
         returns a list of patient records and the user can click on a link to bring up the patient's detail web page.
     </p>
-    <h3>Some Aspect To Discuss</h3>
+    <h3>Some Aspects To Discuss</h3>
     <ul>
         <li>Fields to add to the search criteria</li>
         <li>List of fields to render from the patient record</li>
@@ -94,7 +94,7 @@
         the record that is returned, then the browser will open the Patient Details web page.
     </p>
     <small style="font-size: .8em; float: right">
-        Comments updated on 22-Aug-2013 - v 0.01
+        Comments updated on 23-Aug-2013 - v 0.01
     </small>
 </div>
 </body>
