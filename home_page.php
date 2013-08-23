@@ -28,7 +28,7 @@
 
     <section style="float:right; text-align: right; font-size: 12px;">
         Joe Bloggs MCN: 23454 <a href="index.php">logout</a> <br/>
-        Our Ladys Childresn Hospital Crumlin<br/>
+        Our Ladys Children's Hospital Crumlin<br/>
         Wednesday 15th July 2013
     </section>
     <section>
@@ -50,7 +50,7 @@
         </hgroup>
         <fieldset>
         <p>
-            This page could become a short of dashboard/summary panel for the user.
+            This page could contain a dashboard/summary panel for the user.
         </p>
         <p>
             The page should also include a comprehensive section in regards disclaimers, rules,
@@ -101,7 +101,7 @@
         what menus need to be added in this section. Currently only the Patient>Search menu works.
     </p>
 
-    <h3>Some Aspect To Discuss</h3>
+    <h3>Some Aspects To Discuss</h3>
     <ul>
         <li>Define content for this page</li>
         <li>List of main menus/actions</li>
@@ -111,7 +111,7 @@
         Select the Search option under the Patient menu.
     </p>
     <small style="font-size: .8em; float: right">
-        Comments updated on 22-Aug-2013 - v 0.01
+        Comments updated on 23-Aug-2013 - v 0.01
     </small>
 </div>
 </body>

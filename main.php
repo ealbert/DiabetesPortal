@@ -27,7 +27,7 @@
 
     <section style="float:right; text-align: right; font-size: 12px;">
         Joe Bloggs MCN: 23454 <a href="index.php">logout</a> <br/>
-        Our Ladys Childresn Hospital Crumlin<br/>
+        Our Ladys Children's Hospital Crumlin<br/>
         Wednesday 15th July 2013
     </section>
     <section>
@@ -87,12 +87,27 @@
         amending or adding new records.
     </p>
 
-    <h3>Some Aspect To Discuss</h3>
+    <h3>Some Aspects To Discuss</h3>
     <ul>
-        <li>List of main metrics</li>
-        <li>Metric thresholds</li>
+        <li>Discuss what set of main metrics to be shown in the dashboard</li>
+        <li>Metric thresholds, some examples to discuss:</li>
+            <ul>
+                <li>HbA1c > 9%  (or a threshold to be decided)</li>
+                <li>Previous DNA (did not attend clinic)</li>
+                <li>Raised BMI  (threshold to be decided)</li>
+                <li>Hypoglycaemia unawareness (where the patient doesn’t feel symptoms when they are low – which is really dangerous)</li>
+                <li>Severe hypoglycaemia in last year</li>
+            </ul>
         <li>Section design/functionality discussion</li>
+        <li>Discuss which and how to record patient interactions: current problems, phone calls, appointments</li>
+        <li>HbA1c metric units: mmol/mol or % -- or both</li>
+        <li>Patient details scope, how much data is required. For example:</li>
+            <ul>
+                <li>Guardian details</li>
+                <li>Social & Developmental (eg split family, parent deceased, needs interpreter, home schooling) -- is it fine to just have a comment section?</li>
+            </ul>
     </ul>
+
     <h3>Next Step</h3>
     <p>
         There are not more pages to demonstrate in this release.<br/><br/>
@@ -102,7 +117,7 @@
         </b>
     </p>
     <small style="font-size: .8em; float: right">
-        Comments updated on 22-Aug-2013 - v 0.01
+        Comments updated on 23-Aug-2013 - v 0.01
     </small>
 </div>
 
