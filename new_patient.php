@@ -42,23 +42,9 @@
     <?php require('main_menu.php'); ?>
 </header>
 
-<article class="body">
-    <h2>Home Page</h2>
-    <section style="width: 50%; margin-right: auto; margin-left: auto; margin-top: 20%;">
-        <hgroup>
-            <h3>Page in progress</h3>
-        </hgroup>
-        <fieldset>
-        <p>
-            This page could contain a dashboard/summary panel for the user.
-        </p>
-        <p>
-            The page should also include a comprehensive section in regards disclaimers, rules,
-            policies and so on.
-        </p>
-        </fieldset>
-    </section>
-</article>
+
+<?php require('pages/newPatient/entryForm.php'); ?>
+
 <script type="text/javascript">
     $(function () {
         $("#dialog-message").dialog({
@@ -78,37 +64,37 @@
     var showComments = false;
     <?php
         session_start();
-        if(!isset($_SESSION['HomePageComments'])){
+        if(!isset($_SESSION['SearchComments'])){
          echo 'showComments = true;';
-         $_SESSION['HomePageComments'] = true;
+         $_SESSION['SearchComments'] = true;
         }
     ?>
     $(document).ready(function () {
         if (showComments) {
             $("#dialog-message").dialog('open');
         }
+
     });
 </script>
 <div id="dialog-message" title="Design Comments">
 
-    <h3>Home Page Functionality</h3>
+    <h3>Patient Search Functionality</h3>
     <p>
-        Once the user is authenticated, the user is taken to the Home Page.<br/>
-        All pages, for the moment, have a similar design/aspect, on the top section, some
-        header generic information that displays the user name and other basic details is rendered. Also
-        a link is available so the user can logout if needed, the link takes the user back to the login web page.
-        Then a menu bar contains some of the main functions:  Search Patient, Add New Patient and so on, we need to discuss
-        what menus need to be added in this section. Currently only the Patient>Search menu works.
+        In this web page the user can enter some criteria to query the database for patients.The application
+        returns a list of patient records and the user can click on a link to bring up the patient's detail web page.
     </p>
-
     <h3>Some Aspects To Discuss</h3>
     <ul>
-        <li>Define content for this page</li>
-        <li>List of main menus/actions</li>
+        <li>Fields to add to the search criteria</li>
+        <li>List of fields to render from the patient record</li>
+        <li>Do we limit the number of records that can be returned?</li>
+        <li>Patients with multiple MRNs - consolidation strategy</li>
     </ul>
     <h3>Next Step</h3>
     <p>
-        Select the Search option under the Patient menu.
+        Currently the search function does not work, instead the application returns always the same patient record,
+        regardless the entered criteria values. Just press the Find button and then click on the MRN field for
+        the record that is returned, then the browser will open the Patient Details web page.
     </p>
     <small style="font-size: .8em; float: right">
         Comments updated on 23-Aug-2013 - v 0.01

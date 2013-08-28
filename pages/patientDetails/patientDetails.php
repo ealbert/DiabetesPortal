@@ -23,7 +23,7 @@
                     </div>
                     <div id="hbac1_chart" class="patientDetailsCol-Left">
                         <div class="loaderWrapper" style="min-width: 400px; min-height: 120px;">
-                            <img src="Images/spinner3-bluey.gif" style="max-width: 100%; max-height: 100%; display: block; margin: 0 auto;" />
+                            <img src="images/spinner3-bluey.gif" style="max-width: 100%; max-height: 100%; display: block; margin: 0 auto;" />
                             <p style="text-align: center; font-size: .8em;">Loading chart</p>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
         var parameters = "txt="+$('myText').val();
         var response = $.ajax({
             type: "POST",
-            url:  "PatientDetails/hbac1_chart.php",
+            url:  "pages/PatientDetails/hbac1_chart.php",
             data: parameters,
             dataType: "text",
             success: function(imageData) {

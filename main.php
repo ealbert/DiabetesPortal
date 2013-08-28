@@ -6,18 +6,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
     -->
     <meta charset="utf-8"/>
-    <link href="Images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
     <title>Patient Portal</title>
     <!-- Styles   -->
-    <link href="Content/main.css" rel="stylesheet"/>
-    <link href="Content/jqueryslidemenu.css" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet"/>
+    <link href="css/jqueryslidemenu.css" rel="stylesheet"/>
     <link href="css/base/jquery-ui.css" rel="stylesheet" type="text/css">
     <!-- JavaScript Files    -->
-    <script src="Scripts/jquery-1.10.2.min.js"></script>
-    <script src="Scripts/mousetrap.min.js"></script>
-    <script src="Scripts/modernizr-latest.js"></script>
-    <script src="Scripts/jqueryslidemenu.js"></script>
-    <script src="Scripts/jquery-ui.custom.min.js"></script>
+    <script src="scripts/jquery-1.10.2.min.js"></script>
+    <script src="scripts/mousetrap.min.js"></script>
+    <script src="scripts/modernizr-latest.js"></script>
+    <script src="scripts/jqueryslidemenu.js"></script>
+    <script src="scripts/jquery-ui.custom.min.js"></script>
 </head>
 <!--[if lt IE 9 ]>
 <body id="index" class="home ieLegacy"> <![endif]-->
@@ -31,7 +31,7 @@
         Wednesday 15th July 2013
     </section>
     <section>
-        <img src="Images/hse-logo.png" alt="HSE logo" style="float: left;"/>
+        <img src="images/hse-logo.png" alt="HSE logo" style="float: left;"/>
         <hgroup>
             <h1>Feidhmeannacht na Seirbhíse Sláinte</h1>
             <h1>Health Service Executive</h1>
@@ -41,7 +41,7 @@
     <?php require('main_menu.php'); ?>
 </header>
 
-<?php require('PatientDetails/patientDetails.php'); ?>
+<?php require('pages/patientDetails/patientDetails.php'); ?>
 <script type="text/javascript">
     $(function () {
         $("#dialog-message").dialog({
@@ -58,7 +58,7 @@
         });
     });
 
-    var showComments = true;
+    var showComments = false;
     <?php
         session_start();
         if(!isset($_SESSION['DetailsComments'])){
