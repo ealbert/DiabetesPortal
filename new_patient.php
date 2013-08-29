@@ -9,9 +9,8 @@
     <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
     <title>Patient Portal</title>
     <!-- Styles   -->
-    <link href="css/main.css" rel="stylesheet"/>
+    <link href="css/newPatient.css" rel="stylesheet"/>
     <link href="css/jqueryslidemenu.css" rel="stylesheet"/>
-    <link href="css/patientSearch.css" rel="stylesheet" />
     <link href="css/base/jquery-ui.css" rel="stylesheet" type="text/css">
     <!-- JavaScript Files    -->
     <script src="scripts/jquery-1.10.2.min.js"></script>
@@ -64,9 +63,9 @@
     var showComments = false;
     <?php
         session_start();
-        if(!isset($_SESSION['SearchComments'])){
+        if(!isset($_SESSION['NewPatient'])){
          echo 'showComments = true;';
-         $_SESSION['SearchComments'] = true;
+         $_SESSION['NewPatient'] = true;
         }
     ?>
     $(document).ready(function () {
@@ -78,26 +77,20 @@
 </script>
 <div id="dialog-message" title="Design Comments">
 
-    <h3>Patient Search Functionality</h3>
+    <h3>New Patient</h3>
     <p>
-        In this web page the user can enter some criteria to query the database for patients.The application
-        returns a list of patient records and the user can click on a link to bring up the patient's detail web page.
+        In this web page the user can create a new record for a new patient. The user only requires a set of
+        details to create the record, once is created, the application opens the "Patient Details" page where
+        all the rest of details can be entered.
     </p>
-    <h3>Some Aspects To Discuss</h3>
+    <h3>Aspects To Discuss</h3>
     <ul>
-        <li>Fields to add to the search criteria</li>
-        <li>List of fields to render from the patient record</li>
-        <li>Do we limit the number of records that can be returned?</li>
-        <li>Patients with multiple MRNs - consolidation strategy</li>
+        <li>Is it correct to create a new patient record with a limited set of details?</li>
+        <li>Set of fields to be included in this page</li>
+        <li>What fields are mandatory</li>
     </ul>
-    <h3>Next Step</h3>
-    <p>
-        Currently the search function does not work, instead the application returns always the same patient record,
-        regardless the entered criteria values. Just press the Find button and then click on the MRN field for
-        the record that is returned, then the browser will open the Patient Details web page.
-    </p>
     <small style="font-size: .8em; float: right">
-        Comments updated on 23-Aug-2013 - v 0.01
+        Comments updated on 29-Aug-2013 - v 0.02
     </small>
 </div>
 </body>

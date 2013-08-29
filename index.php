@@ -116,43 +116,18 @@
     });
 </script>
 <div id="dialog-message" title="Design Comments">
-    <h3>Demo - Overview</h3>
-
+    <h3>New Functionality in version 0.02</h3>
     <p>
-        <!--<span class="ui-icon ui-icon-circle-check" style="float: left; margin: 0 7px 50px 0;"></span>-->
-        The current version of the web site comprises four web pages: Login, Home Page, Patient Search and Patient
-        Details. The purpose of this release is to provide a sort of baseline to help in the definition of
-        the functional requirements, scope and prioritisation. The screens provide an insight of how we intend
-        the application to work, but in this release, the web pages have very little functionality in relation to amend or create
-        new records.<br/>
-        Nevertheless, the available pages are sufficient to discuss the process a user will follow to start
-        the application, find a patient and query some patient details. The key aspect at this stage in the project is to develop
-        in short iterations and trying to gather as much feedback as possible from the stakeholders,
-        doing so we ensure that the development does not waist time working on unwanted functionality or/and not focusing
-        on the high priority aspects of the application.
-    </p>
-
-    <h3>Login Functionality</h3>
-
-    <p>
-        When the user accesses the web site for the first time, the login web page requires the user to enter a user id and
-        password. Once the user is authenticated, the user is taken to the home page. Currently the login web page does not validate any
-        input, so just pressing in the login button in this release takes the user to the following web page.
-    </p>
-
-    <h3>Some Aspects To Discuss</h3>
-    <ul>
-        <li>Security scope: internal and public functionality</li>
-        <li>Type of users and level of authorisation</li>
-        <li>User ids: MCN, bord altranais number and external people</li>
-        <li>Self Registration functionality</li>
-    </ul>
-    <h3>Next Step</h3>
-    <p>
-        Click on the login button to access to the Home Page
+        <ul>
+            <li>New Patient Page</li>
+            <li>Patient Details Page</li>
+            <ul>
+                <li>Last Contact detail was added on the top panel</li>
+            </ul>
+        </ul>
     </p>
     <small style="font-size: .8em; float: right">
-        Comments updated on 23-Aug-2013 - v 0.01
+        Comments updated on 29-Aug-2013 - v 0.02
     </small>
 </div>
 </body>

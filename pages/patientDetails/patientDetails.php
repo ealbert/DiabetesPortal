@@ -12,7 +12,7 @@
                         <label class="field">Gender:</label><input disabled value="male"/><br/>
                         <label class="field">MRN:</label><input disabled value="56452354"/><br/>
                         <label class="field">Last Visit:</label><input disabled value="25-Jul-2013"/><br/>
-                        <label class="field">Mobile:</label><input disabled value="085 341 2398"/><br/>
+                        <label class="field">Last Contact:</label><input disabled value="28-Jul-2013 (Call)"/><br/>
                     </div>
                     <div class="patientDetailsCol-Left">
                         <label class="field">DoB:</label><input disabled value="21-Feb-2003"/><br/>
