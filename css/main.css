@@ -1,0 +1,14 @@
+/*
+	Main css
+	Description: Layout for the patient details page
+
+*/
+
+/* Imports */
+@import url("reset.css");
+@import url("global-forms.css");
+@import url("site.css");
+@import url("sections.css");
+@import url("patientDetails.css");
+@import url("master.css");
+

@@ -26,14 +26,14 @@
 
 /* Toggler Icon */
 .toggler .closed{
-    background: url('../Images/toggle_plus.png') center;
+    background: url('../images/toggle_plus.png') center;
     float: right;
     height: 30px;
     width: 30px;
 }
 
 .toggler .open{
-    background: url('../Images/toggle_minus.png') center;
+    background: url('../images/toggle_minus.png') center;
     float: right;
     height: 30px;
     width: 30px;

@@ -1,0 +1,32 @@
+@import url("reset.css");
+@import url("site.css");
+@import url("master.css");
+
+label.field{
+    width: 200px;
+    float: left;
+    font-weight: bold;
+    line-height: 26px;
+}
+
+input,
+select{
+    width: 200px;
+    margin-top: 10px;
+
+}
+
+/* Submit Button */
+input[type='submit'] {
+    border-radius: 5px;
+    padding: .3em 1.3em;
+    width: auto;
+}
+
+fieldset {
+    background: #f9f9f9;
+    padding: 1em;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}

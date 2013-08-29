@@ -1,8 +1,8 @@
 <?php
 session_start();
-require_once('../pChart/class/pData.class.php');
-require_once('../pChart/class/pDraw.class.php');
-require_once('../pChart/class/pImage.class.php');
+require_once('../../pChart/class/pData.class.php');
+require_once('../../pChart/class/pDraw.class.php');
+require_once('../../pChart/class/pImage.class.php');
 
 if(isset($_SESSION['counter'])){
     $_SESSION['counter'] = $_SESSION['counter'] + 1;
@@ -25,7 +25,7 @@ $myData->setAxisName(0,"HbA1c %");
 
 $myPicture = new pImage(400,140,$myData);
 $myPicture->setGraphArea(50,10,390,110);
-$myPicture->setFontProperties(array("FontName"=>"../pChart/fonts/trebuc.ttf","FontSize"=>8));
+$myPicture->setFontProperties(array("FontName"=>"../../pChart/fonts/trebuc.ttf","FontSize"=>8));
 $myPicture->drawScale();
 
 $Config = array("BreakVoid"=>FALSE);

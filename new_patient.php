@@ -9,9 +9,8 @@
     <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
     <title>Patient Portal</title>
     <!-- Styles   -->
-    <link href="css/main.css" rel="stylesheet"/>
+    <link href="css/newPatient.css" rel="stylesheet"/>
     <link href="css/jqueryslidemenu.css" rel="stylesheet"/>
-    <link href="css/patientSearch.css" rel="stylesheet" />
     <link href="css/base/jquery-ui.css" rel="stylesheet" type="text/css">
     <!-- JavaScript Files    -->
     <script src="scripts/jquery-1.10.2.min.js"></script>
@@ -42,23 +41,9 @@
     <?php require('main_menu.php'); ?>
 </header>
 
-<article class="body">
-    <h2>Home Page</h2>
-    <section style="width: 50%; margin-right: auto; margin-left: auto; margin-top: 20%;">
-        <hgroup>
-            <h3>Page in progress</h3>
-        </hgroup>
-        <fieldset>
-        <p>
-            This page could contain a dashboard/summary panel for the user.
-        </p>
-        <p>
-            The page should also include a comprehensive section in regards disclaimers, rules,
-            policies and so on.
-        </p>
-        </fieldset>
-    </section>
-</article>
+
+<?php require('pages/newPatient/entryForm.php'); ?>
+
 <script type="text/javascript">
     $(function () {
         $("#dialog-message").dialog({
@@ -78,40 +63,34 @@
     var showComments = false;
     <?php
         session_start();
-        if(!isset($_SESSION['HomePageComments'])){
+        if(!isset($_SESSION['NewPatient'])){
          echo 'showComments = true;';
-         $_SESSION['HomePageComments'] = true;
+         $_SESSION['NewPatient'] = true;
         }
     ?>
     $(document).ready(function () {
         if (showComments) {
             $("#dialog-message").dialog('open');
         }
+
     });
 </script>
 <div id="dialog-message" title="Design Comments">
 
-    <h3>Home Page Functionality</h3>
+    <h3>New Patient</h3>
     <p>
-        Once the user is authenticated, the user is taken to the Home Page.<br/>
-        All pages, for the moment, have a similar design/aspect, on the top section, some
-        header generic information that displays the user name and other basic details is rendered. Also
-        a link is available so the user can logout if needed, the link takes the user back to the login web page.
-        Then a menu bar contains some of the main functions:  Search Patient, Add New Patient and so on, we need to discuss
-        what menus need to be added in this section. Currently only the Patient>Search menu works.
+        In this web page the user can create a new record for a new patient. The user only requires a set of
+        details to create the record, once is created, the application opens the "Patient Details" page where
+        all the rest of details can be entered.
     </p>
-
-    <h3>Some Aspects To Discuss</h3>
+    <h3>Aspects To Discuss</h3>
     <ul>
-        <li>Define content for this page</li>
-        <li>List of main menus/actions</li>
+        <li>Is it correct to create a new patient record with a limited set of details?</li>
+        <li>Set of fields to be included in this page</li>
+        <li>What fields are mandatory</li>
     </ul>
-    <h3>Next Step</h3>
-    <p>
-        Select the Search option under the Patient menu.
-    </p>
     <small style="font-size: .8em; float: right">
-        Comments updated on 23-Aug-2013 - v 0.01
+        Comments updated on 29-Aug-2013 - v 0.02
     </small>
 </div>
 </body>

@@ -1,6 +1,6 @@
 <html>
 <head>
-    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../scripts/jquery-1.10.2.min.js"></script>
 </head>
 <body>
 <p>Pre-Ajax call</p>
