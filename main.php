@@ -58,7 +58,7 @@
         });
     });
 
-    var showComments = true;
+    var showComments = false;
     <?php
         session_start();
         if(!isset($_SESSION['DetailsComments'])){
