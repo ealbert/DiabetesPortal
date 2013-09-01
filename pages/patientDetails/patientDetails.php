@@ -1,3 +1,10 @@
+<?php
+session_start();
+$page_title = "PatientDetails";
+$header_stylesheet = '<link href="../../css/main.css" rel="stylesheet" type="text/css"/>';
+$header_scripts = '';
+require_once('/../common/header.php');
+?>
 <article id="PatientSummary" class="body">
     <header>
         <h2>Patient Demographics</h2>
@@ -23,7 +30,7 @@
                     </div>
                     <div id="hbac1_chart" class="patientDetailsCol-Left">
                         <div class="loaderWrapper" style="min-width: 400px; min-height: 120px;">
-                            <img src="images/spinner3-bluey.gif" style="max-width: 100%; max-height: 100%; display: block; margin: 0 auto;" />
+                            <img src="../../images/spinner3-bluey.gif" style="max-width: 100%; max-height: 100%; display: block; margin: 0 auto;" />
                             <p style="text-align: center; font-size: .8em;">Loading chart</p>
                         </div>
                     </div>
@@ -129,7 +136,7 @@
         var parameters = "txt="+$('myText').val();
         var response = $.ajax({
             type: "POST",
-            url:  "pages/PatientDetails/hbac1_chart.php",
+            url:  "hbac1_chart.php",
             data: parameters,
             dataType: "text",
             success: function(imageData) {
@@ -143,3 +150,8 @@
 </script>
 
 <?php
+$footer_scripts = '';
+require_once('/../../templates/pageComments/patientDetails.html');
+require_once('/../common/pageComments.php');
+require_once('/../common/footer.php');
+?>

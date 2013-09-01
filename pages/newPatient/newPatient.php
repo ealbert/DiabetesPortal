@@ -1,7 +1,14 @@
+<?php
+session_start();
+$page_title = "NewPatient";
+$header_stylesheet = '<link href="../../css/newPatient.css" rel="stylesheet" type="text/css"/>';
+$header_scripts = '';
+require_once('/../common/header.php');
+?>
 <article class="body">
     <h2>New Patient</h2>
     <section>
-        <form id="newPatient" action="main.php">
+        <form id="newPatient" action="../patientDetails/patientDetails.php">
             <fieldset>
                 <label class="field">First Name:</label><input type="text"/><br/>
                 <label class="field">Last Name:</label><input type="text"/><br/>
@@ -29,3 +36,9 @@
     </section>
 </article>
 <br/>
+<?php
+$footer_scripts = '';
+require_once('/../../templates/pageComments/newPatient.html');
+require_once('/../common/pageComments.php');
+require_once('/../common/footer.php');
+?>

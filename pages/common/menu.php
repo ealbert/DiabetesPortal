@@ -3,8 +3,8 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">Patient</a>
             <ul>
-                <li><a href="patient_search.php">Search</a></li>
-                <li><a href="new_patient.php">New Patient</a></li>
+                <li><a href="../patientSearch/patientSearch.php">Search</a></li>
+                <li><a href="../newPatient/newPatient.php">New Patient</a></li>
             </ul>
         </li>
         <li><a href="#">Admin</a></li>

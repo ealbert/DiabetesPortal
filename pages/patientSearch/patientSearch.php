@@ -1,4 +1,11 @@
-<link >
+<?php
+session_start();
+$page_title = "PatientSearch";
+$header_stylesheet = '<link href="../../css/main.css" rel="stylesheet" type="text/css"/>';
+$header_stylesheet .= '<link href="../../css/patientSearch.css" rel="stylesheet" />';
+$header_scripts = '';
+require_once('/../common/header.php');
+?>
 <article class="body">
     <h2>Patient Search</h2>
     <section>
@@ -32,7 +39,7 @@
                     <td>Joe</td>
                     <td>Bloggs</td>
                     <td>21-Feb-2003</td>
-                    <td><a href="main.php">56452354</a></td>
+                    <td><a href="../patientDetails/patientDetails.php">56452354</a></td>
                 </tr>
                 </tbody>
             </table>
