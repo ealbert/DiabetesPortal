@@ -6,7 +6,7 @@
     <div id="sectionOutpatient-details" class="section sectionLog">
         <div class="sectionMenu">
             <ul>
-                <li><a href="#">Add New</a></li>
+                <li><a href="../review/review.php">Add New</a></li>
                 <li><a href="#">Delete</a></li>
             </ul>
         </div>
