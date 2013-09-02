@@ -1,5 +1,12 @@
-<link >
-<article class="body">
+<?php
+session_start();
+$page_title = "PatientSearch";
+$header_stylesheet = '<link href="../../css/main.css" rel="stylesheet" type="text/css"/>';
+$header_stylesheet .= '<link href="../../css/patientSearch.css" rel="stylesheet" />';
+$header_scripts = '';
+require_once('/../common/header.php');
+?>
+<article class="body" xmlns="http://www.w3.org/1999/html">
     <h2>Patient Search</h2>
     <section>
         <form id="searchForm" action="main.php">
@@ -25,6 +32,7 @@
                     <th>Last Name</th>
                     <th>Date of Birth</th>
                     <th>MRN</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -32,7 +40,12 @@
                     <td>Joe</td>
                     <td>Bloggs</td>
                     <td>21-Feb-2003</td>
-                    <td><a href="main.php">56452354</a></td>
+                    <td><a href="../patientDetails/patientDetails.php">56452354</a></td>
+                    <td>
+                        <form action="../review/review.php" method="get">
+                            <button type="submit" value="12345" name="patientId">New Review</button>
+                        </form>
+                    </td>
                 </tr>
                 </tbody>
             </table>
