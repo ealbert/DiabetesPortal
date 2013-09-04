@@ -11,10 +11,7 @@ require_once('/../common/header.php');
     </header>
     <?php require('/../common/patientBoard.php');?>
     <?php require('detailsSection.php');?>
-    <?php require('educationSection.php');?>
-    <?php require('ongoing.php');?>
-    <?php require('outpatientAppointments.php');?>
-    <?php require('annualReview.php');?>
+    <?php require('encounters.php');?>
 <script type="text/javascript">
     $(document).ready(function(){
         $("article .section").hide();
@@ -27,6 +24,11 @@ require_once('/../common/header.php');
             if(toOpen){
                 $(sectionDetails).slideDown( function(){
                     $(sectionIcon).removeClass().addClass("open");
+                        var menu = $(this).find(".dynamicMenu")[0];
+                        if(!menu) return;
+                        $(menu).removeClass("dynamicMenu");
+                        var currentId = $(menu).attr('id');
+                        jqueryslidemenu.buildmenu(currentId, arrowimages);
                 });
             }
             else{

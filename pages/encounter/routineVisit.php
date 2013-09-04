@@ -16,7 +16,8 @@ require_once('/../common/header.php');
 <br/>
 <article id="ReviewDetails" class="body">
     <header>
-        <h2>Review Details</h2>
+<!--        <span style="float: right"><small><a href="#">Previous routine visits</a></small></span>-->
+        <h2>Routine Visit</h2>
     </header>
     <section>
         <form id="reviewForm" action="../patientDetails/patientDetails.php" method="post">
@@ -59,7 +60,8 @@ require_once('/../common/header.php');
 
                 </fieldset>
                 <br/>
-                <input type="submit" value="Save">
+                <input type="submit" value="Save"/>
+                <input type="button" value="Cancel" onclick="history.back()" />
             </fieldset>
         </form>
     </section>
@@ -72,7 +74,7 @@ require_once('/../common/header.php');
 </script>
 <?php
 $footer_scripts = '';
-require_once('/../../templates/pageComments/review.html');
+require_once('/../../templates/pageComments/routineVisit.html');
 require_once('/../common/pageComments.php');
 require_once('/../common/footer.php');
 ?>

@@ -42,7 +42,7 @@ require_once('/../common/header.php');
                     <td>21-Feb-2003</td>
                     <td><a href="../patientDetails/patientDetails.php">56452354</a></td>
                     <td>
-                        <form action="../review/review.php" method="get">
+                        <form action="../encounter/routineVisit.php" method="get">
                             <button type="submit" value="12345" name="patientId">New Review</button>
                         </form>
                     </td>
@@ -58,3 +58,9 @@ require_once('/../common/header.php');
         return false;
     });
 </script>
+<?php
+$footer_scripts = '';
+require_once('/../../templates/pageComments/patientSearch.html');
+require_once('/../common/pageComments.php');
+require_once('/../common/footer.php');
+?>
