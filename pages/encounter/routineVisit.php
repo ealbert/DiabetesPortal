@@ -9,15 +9,12 @@ require_once('/../common/header.php');
 ?>
 <article id="PatientSummary" class="body">
     <header>
-        <h2>New Review</h2>
+        <h2>New Routine Visit</h2>
     </header>
     <?php require('/../common/patientBoard.php');?>
 </article>
 <br/>
 <article id="ReviewDetails" class="body">
-    <header>
-        <h2>Review Details</h2>
-    </header>
     <section>
         <form id="reviewForm" action="../patientDetails/patientDetails.php" method="post">
             <fieldset>
@@ -59,7 +56,8 @@ require_once('/../common/header.php');
 
                 </fieldset>
                 <br/>
-                <input type="submit" value="Save">
+                <input type="submit" value="Save"/>
+                <input type="button" value="Cancel" onclick="history.back()" />
             </fieldset>
         </form>
     </section>
@@ -72,7 +70,7 @@ require_once('/../common/header.php');
 </script>
 <?php
 $footer_scripts = '';
-require_once('/../../templates/pageComments/review.html');
+require_once('/../../templates/pageComments/routineVisit.html');
 require_once('/../common/pageComments.php');
 require_once('/../common/footer.php');
 ?>

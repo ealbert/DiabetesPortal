@@ -1,4 +1,4 @@
-<div id="myslidemenu" class="jqueryslidemenu">
+<div id="pageMenu" class="mainMenu jqueryslidemenu">
     <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Patient</a>

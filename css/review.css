@@ -1,5 +1,6 @@
 /* Submit Button */
-input[type='submit'] {
+input[type='submit'] ,
+input[type='button']{
     border-radius: 5px;
     padding: .3em 1.3em;
     width: auto;

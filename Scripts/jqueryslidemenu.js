@@ -51,5 +51,3 @@ buildmenu:function(menuid, arrowsvar){
 }
 }
 
-//build menu with ID="myslidemenu" on page:
-jqueryslidemenu.buildmenu("myslidemenu", arrowimages)
