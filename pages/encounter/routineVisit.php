@@ -9,16 +9,12 @@ require_once('/../common/header.php');
 ?>
 <article id="PatientSummary" class="body">
     <header>
-        <h2>New Review</h2>
+        <h2>New Routine Visit</h2>
     </header>
     <?php require('/../common/patientBoard.php');?>
 </article>
 <br/>
 <article id="ReviewDetails" class="body">
-    <header>
-<!--        <span style="float: right"><small><a href="#">Previous routine visits</a></small></span>-->
-        <h2>Routine Visit</h2>
-    </header>
     <section>
         <form id="reviewForm" action="../patientDetails/patientDetails.php" method="post">
             <fieldset>
