@@ -55,7 +55,7 @@ input.rightCol:focus{
 }
 
 /* Submit Button */
-input.rightCol[type='submit'],{
+input.rightCol[type='submit']{
     border-radius: 5px;
     padding: .3em 1.3em;
     float: right;

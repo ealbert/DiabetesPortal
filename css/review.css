@@ -16,6 +16,35 @@ fieldset .hypo_details {
 }
 
 fieldset .hypo_details .firstColumn{
-    width: 200px;
+    width: 80px;
     float: left;
+    line-height: 30px;
+}
+
+.field.widerColumn{
+    width: 150px;
+}
+
+table.basalRates{
+    width: 50%;
+    margin: 0.5em;
+}
+
+.basalRates thead tr{
+    font-weight: bold;
+    background-color: lightgoldenrodyellow;
+}
+
+.basalRates tbody input{
+    width: 100%;
+    height: 100%;
+    text-align: center;;
+}
+
+.basalRates {
+    text-align: center;
+
+}
+.basalRates tbody td{
+    padding: 0;
 }
