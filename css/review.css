@@ -11,7 +11,7 @@ thead th{
     border-width: 2px;
 }
 
-fieldset .hypo_details {
+fieldset .withBorder {
     border: #000000 solid 1px;
 }
 
@@ -23,6 +23,12 @@ fieldset .hypo_details .firstColumn{
 
 .field.widerColumn{
     width: 150px;
+}
+
+.wideLabel{
+    width: 200px;
+    float: left;
+    font-weight: bold;
 }
 
 table.basalRates{

@@ -18,7 +18,20 @@ require_once('/../common/header.php');
                     <option value="Crumlin">Female</option>
                     <option value="TempleStreet">Male</option>
                 </select><br/>
-                <label class="field">Ethnicity:</label><input type="text"/><br/>
+                <label class="field">Ethnic Group:</label>
+                <select form="newPatient">
+                    <option value="blank">-- select one ethnic group --</option>
+                    <option value="White-Irish">White Irish</option>
+                    <option value="White-Irish-Traveller">White Irish Traveller</option>
+                    <option value="White-Other">White Other</option>
+                    <option value="Black-African">Black African</option>
+                    <option value="Black-Other">Black Other</option>
+                    <option value="Asian-Chinese">Chinese</option>
+                    <option value="Asian-Other">Asian Other</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br/>
+
                 <label class="field">Centre:</label>
                 <select form="newPatient">
                     <option value="blank">-- select one centre --</option>

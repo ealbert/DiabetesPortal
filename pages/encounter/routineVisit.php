@@ -61,7 +61,7 @@ require_once('/../common/header.php');
                     </tr>
                 </table>
 
-                <fieldset class="hypo_details">
+                <fieldset class="withBorder">
                     <legend>Severe Hypoglycaemia Events In The Past Year</legend>
                     <label class="firstColumn">Seizure</label>
                     <input type="text" style="float: left;" value="0"/>

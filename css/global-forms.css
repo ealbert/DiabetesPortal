@@ -48,28 +48,35 @@ label {font-size: 1.1em; height: 25px; line-height: 25px;}
 	input[type='text']:focus,
 	input[type='email']:focus,
 	input[type='url']:focus,
+    input[type='date']:focus,
+    select:focus,
 	textarea:focus {
 		background: #ffC;
 		border-color: #ff1;
 		color: #0d0d0d;
 	}
+
+    input[type='submit']:focus,
+    input[type='button']:focus {
+        border-color: #ff1;
+    }
 	
 	input[type='checkbox'], input[type='radio'] {
 		display: block;
 		margin-top: 4px;
 	}
-	/**/
-	/*input[type='submit'] {*/
+
+	input[type='submit'] {
 		/*background: #C74350;*/
-		/*border: 0;*/
-		/*border-radius: 5px;*/
+		border: 2;
+		border-radius: 5px;
 		/*color: #fff;*/
-		/*cursor: pointer;*/
-		/*font-family: inherit;*/
-		/*font-size: inherit;*/
-		/*padding: .3em 2em;*/
+		cursor: pointer;
+		font-family: inherit;
+		font-size: inherit;
+		padding: .3em 2em;
 		/*text-shadow: 1px 1px 1px #000;*/
-	/*}*/
+	}
 	
 	input:required, textarea:required {outline: 1px solid #C74350;}
 	

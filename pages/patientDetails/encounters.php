@@ -16,6 +16,7 @@
                 <li><a href="#">Add New</a>
                     <ul>
                         <li><a href="../patientSearch/patientSearch.php">Diagnosis</a></li>
+                        <li><a href="../encounter/register.php">Register</a></li>
                         <li><a href="../newPatient/newPatient.php">Annual Review</a></li>
                         <li><a href="../encounter/routineVisit.php">Routine Visit</a></li>
                     </ul>
