@@ -4,19 +4,12 @@
         <span>Encounters</span>
     </div>
     <div id="sectionOutgoing-details" class="section sectionLog">
-<!--        <div class="sectionMenu">-->
-<!--            <ul>-->
-<!--                <li><a href="#">Add New</a></li>-->
-<!--                <li><a href="#">Delete</a></li>-->
-<!--            </ul>-->
-<!--        </div>-->
         <div id="encounterMenu"class="dynamicMenu jqueryslidemenu">
             <ul>
-                <li><a href="#">Help</a></li>
+                <li><a href="../encounter/register.php">Register</a></li>
+                <li><a href="../patientSearch/patientSearch.php">Diagnosis</a></li>
                 <li><a href="#">Add New</a>
                     <ul>
-                        <li><a href="../patientSearch/patientSearch.php">Diagnosis</a></li>
-                        <li><a href="../encounter/register.php">Register</a></li>
                         <li><a href="../newPatient/newPatient.php">Annual Review</a></li>
                         <li><a href="../encounter/routineVisit.php">Routine Visit</a></li>
                     </ul>
