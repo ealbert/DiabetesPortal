@@ -107,7 +107,7 @@ require_once('/../common/header.php');
     $(document).ready(function(){
         getChart();
         var basalRates = [
-            [0, 0, 0],
+            [0, 0, 0]
         ];
 
         var bgTargets = [
@@ -131,8 +131,6 @@ require_once('/../common/header.php');
                 {type: 'numeric', format: '0,0.0'},
                 {type: 'numeric', format: '0,0.0'}
             ]
-        }, function(){
-            $("#basalRates#current").mask("99:99");
         });
 
         $('#bgTargets').handsontable({
