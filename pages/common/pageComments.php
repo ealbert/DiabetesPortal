@@ -19,7 +19,7 @@
         session_start();
         $page = htmlentities(urlencode($page_title))."Comments";
         if(!isset($_SESSION[$page])){
-         echo 'showComments = true;';
+         echo 'showComments = false;';
          $_SESSION[$page] = true;
         }
     ?>

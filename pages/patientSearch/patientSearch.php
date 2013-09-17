@@ -6,7 +6,7 @@ $header_stylesheet .= '<link href="../../css/patientSearch.css" rel="stylesheet"
 $header_scripts = '';
 require_once('/../common/header.php');
 ?>
-<article class="body" xmlns="http://www.w3.org/1999/html">
+<article class="body">
     <h2>Patient Search</h2>
     <section>
         <form id="searchForm" action="main.php">

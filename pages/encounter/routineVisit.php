@@ -9,7 +9,7 @@ $header_scripts .= '<script src="../../jquery.maskedinput.js" type="text/javascr
 $today = date("Y-m-d");
 require_once('/../common/header.php');
 ?>
-<article id="PatientSummary" class="body" xmlns="http://www.w3.org/1999/html">
+<article id="PatientSummary" class="body">
     <header>
         <h2>New Routine Visit</h2>
     </header>
@@ -153,7 +153,7 @@ require_once('/../common/header.php');
             minSpareRows: 0,
             colHeaders: ["Old", "New"],
             contextMenu: false,
-            colWidths: 100,
+            colWidths: 90,
             columns: [
                 {type: 'numeric', format: '0,0'},
                 {type: 'numeric', format: '0,0'}
