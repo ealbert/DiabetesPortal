@@ -83,7 +83,7 @@ require_once('/../common/header.php');
                         <h2>Blood Glucose Targets</h2>
                         <div id="bgTargets" class="handsontable"></div>
                     </div>
-                    <div style="display: inline-table">
+                    <div style="display: inline-table; width: 25%;">
                         <h2>Active Insulin</h2>
                         <div id="activeIns" class="handsontable"></div>
                     </div>
