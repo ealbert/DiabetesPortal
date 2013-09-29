@@ -54,3 +54,25 @@ table.basalRates{
 .basalRates tbody td{
     padding: 0;
 }
+
+#carbRatio.handsontable col.rowHeader,
+#dietHistory.handsontable col.rowHeader{
+    width: 100px!important;
+}
+
+#dietHistory.handsontable table  tr {
+    white-space: pre-line;
+    max-width: 400px;/* enter here your max header width */
+}
+
+#foodGroups .field,
+#carbCounting .field{
+    width: 100px;
+    float: none;
+    font-weight: bold;
+}
+
+#foodGroups input[type="checkbox"],
+#carbCounting input[type="checkbox"]{
+    display: inline;
+}
