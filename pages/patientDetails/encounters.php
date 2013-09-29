@@ -8,10 +8,16 @@
             <ul>
                 <li><a href="../encounter/register.php">Register</a></li>
                 <li><a href="../patientSearch/patientSearch.php">Diagnosis</a></li>
-                <li><a href="#">Add New</a>
+                <li><a href="#">Routine Visit</a>
                     <ul>
-                        <li><a href="../newPatient/newPatient.php">Annual Review</a></li>
-                        <li><a href="../encounter/routineVisit.php">Routine Visit</a></li>
+                        <li><a href="../encounter/routineVisit.php">Pump</a></li>
+                        <li><a href="../encounter/routineVisitInjections.php">Injections</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Annual Review</a>
+                    <ul>
+                        <li><a href="../encounter/annualReview.php">Pump</a></li>
+                        <li><a href="../encounter/annualReviewInjections.php">Injections</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Delete</a></li>
