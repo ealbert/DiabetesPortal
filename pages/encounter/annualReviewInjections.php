@@ -10,7 +10,7 @@ require_once('/../common/header.php');
 ?>
 <article id="PatientSummary" class="body">
     <header>
-        <h2>Annual Review [PUMP]</h2>
+        <h2>Annual Review [INJECTIONS]</h2>
     </header>
     <?php require('/../common/patientBoard.php');?>
 </article>
