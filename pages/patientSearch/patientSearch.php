@@ -42,9 +42,7 @@ require_once('/../common/header.php');
                     <td>21-Feb-2003</td>
                     <td><a href="../patientDetails/patientDetails.php">56452354</a></td>
                     <td>
-                        <form action="../encounter/routineVisit.php" method="get">
-                            <button type="submit" value="12345" name="patientId">New Review</button>
-                        </form>
+                        <button id="button-review" type="submit" value="12345" name="patientId">New Review</button>
                     </td>
                 </tr>
                 </tbody>
@@ -52,10 +50,53 @@ require_once('/../common/header.php');
         </fieldset>
     </section>
 </article>
+<div id="dialog-review" title="Create a new review encounter" style="display: none">
+    <h2>Patient uses a pump</h2>
+    <img src="../../Images/pump_logo.png" alt="Injection Logo"  style="display: inline-block;"/>
+    <div style="display: inline-block; vertical-align: top; " >
+        <form action="../encounter/routineVisit.php" method="get">
+            <button type="submit" value="12345" name="patientId">New Routine Visit</button>
+        </form>
+        <form action="../encounter/annualReview.php" method="get">
+            <button type="submit" value="12345" name="patientId">Annual Review</button>
+        </form>
+    </div>
+    <br/>
+    <br/>
+    <h2>Patient uses injections</h2>
+    <img src="../../Images/injection_logo.png" alt="Injection Logo" style="display: inline-block;"/>
+    <div style="display: inline-block; vertical-align: top; " >
+        <form action="../encounter/routineVisitInjections.php" method="get">
+            <button type="submit" value="12345" name="patientId">New Routine Visit</button>
+        </form>
+        <form action="../encounter/annualReviewInjections.php" method="get">
+            <button type="submit" value="12345" name="patientId">Annual Review</button>
+        </form>
+    </div>
+</div>
 <script type="text/javascript">
     $("#searchForm").submit(function(){
        $("#searchResults").fadeIn('slow');
         return false;
+    });
+
+    $(function () {
+        $("#dialog-review").dialog({
+            modal: true,
+            width: 400,
+            show: 1000,
+            hide: 1500,
+            autoOpen: false,
+            buttons: {
+                Cancel: function () {
+                    $(this).dialog("close");
+                }
+            }
+        });
+
+        $("#button-review").click(function(){
+            $("#dialog-review").dialog('open');
+        });
     });
 </script>
 <?php
