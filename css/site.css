@@ -10,7 +10,8 @@ header#banner.body h4{
 /***** Global *****/
 label.field{
     width: 100px;
-    float: left;
+    /*float: left;*/
+    display: inline-table;
     font-weight: bold;
 }
 fieldset p {

@@ -73,13 +73,9 @@ require_once('/../common/header.php');
             </fieldset>
             <fieldset class="formTwo" style="display: none;">
                 <div>
-                    <div>
-                        <div style="display: inline-table; width: 40%;">
-                            <h2>Injection Therapy</h2>
-                            <div id="mdi" class="handsontable"></div>
-                            <br/>
-                        </div>
-                    </div>
+                    <h2>Injection Therapy</h2>
+                    <div id="mdi" class="handsontable"></div>
+                    <br/>
                 </div>
                 <input type="button" value="Next" onclick="showForm('formTwo', 'formThree')" style="float: right;" />
                 <input type="button" value="Previous" onclick="showForm('formTwo', 'formOne')" />
