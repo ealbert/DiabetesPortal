@@ -55,10 +55,10 @@ require_once('/../common/header.php');
     <img src="../../Images/pump_logo.png" alt="Injection Logo"  style="display: inline-block;"/>
     <div style="display: inline-block; vertical-align: top; " >
         <form action="../encounter/routineVisit.php" method="get">
-            <button type="submit" value="12345" name="patientId">New Routine Visit</button>
+            <button class="dialog-button" type="submit" value="12345" name="patientId">New Routine Visit</button>
         </form>
         <form action="../encounter/annualReview.php" method="get">
-            <button type="submit" value="12345" name="patientId">Annual Review</button>
+            <button class="dialog-button" type="submit" value="12345" name="patientId">Annual Review</button>
         </form>
     </div>
     <br/>
@@ -67,10 +67,10 @@ require_once('/../common/header.php');
     <img src="../../Images/injection_logo.png" alt="Injection Logo" style="display: inline-block;"/>
     <div style="display: inline-block; vertical-align: top; " >
         <form action="../encounter/routineVisitInjections.php" method="get">
-            <button type="submit" value="12345" name="patientId">New Routine Visit</button>
+            <button class="dialog-button" type="submit" value="12345" name="patientId">New Routine Visit</button>
         </form>
         <form action="../encounter/annualReviewInjections.php" method="get">
-            <button type="submit" value="12345" name="patientId">Annual Review</button>
+            <button class="dialog-button" type="submit" value="12345" name="patientId">Annual Review</button>
         </form>
     </div>
 </div>
@@ -83,7 +83,7 @@ require_once('/../common/header.php');
     $(function () {
         $("#dialog-review").dialog({
             modal: true,
-            width: 400,
+            width: 320,
             show: 1000,
             hide: 1500,
             autoOpen: false,

@@ -1,8 +1,7 @@
 <?php
 session_start();
 $page_title = "Review";
-$header_stylesheet = '<link href="../../css/main.css" rel="stylesheet" type="text/css"/>';
-$header_stylesheet .= '<link href="../../css/review.css" rel="stylesheet" />';
+$header_stylesheet = '<link href="../../css/review.css" rel="stylesheet" />';
 $header_stylesheet .= '<link href="../../css/jquery.handsontable.full.css" rel="stylesheet" />';
 $header_scripts = '<script src="../../scripts/jquery.handsontable.full.js"></script>';
 $today = date("Y-m-d");
@@ -19,266 +18,32 @@ require_once('/../common/header.php');
     <section>
         <form id="reviewForm" action="../patientDetails/patientDetails.php" method="post">
             <fieldset class="formOne">
-                <label class="field">Review Date:</label><input type="date" value="<?php echo $today; ?>"/>
-                <br/><br/>
-                <fieldset class="withBorder">
-                    <div style="display: inline-table; width: 50%">
-                        <label class="field">Height:</label><input type="text"/><br/>
-                        <label class="field">Weight:</label><input type="text"/><br/>
-                        <label class="field">HbA1c:</label><input type="text"/><br/>
-                        <label class="field">BP:</label><input type="text"/><br/>
-
-                        <label class="field">Daily Dose:</label>
-                        <input type="text"/>
-                        <label class="post-info"> = xxx units/kg/day</label>
-                        <br/>
-                        <label class="field">Glucagon:</label><input type="text" value="0"/>
-                    </div>
-                    <div style="display: inline-table;">
-                        <label class="field widerColumn">CHO Aware:</label>
-                        <select>
-                            <option value="true">Yes</option>
-                            <option value="false" selected>No</option>
-                        </select>
-                        <br/>
-                        <label class="field widerColumn">CHO Counting:</label>
-                        <select>
-                            <option value="true">Yes</option>
-                            <option value="false" selected>No</option>
-                        </select>
-                        <br/>
-                        <label class="field widerColumn">Hypo. Aware:</label>
-                        <select>
-                            <option value="true">Yes</option>
-                            <option value="false" selected>No</option>
-                        </select>
-                        <br/>
-                        <label class="field widerColumn">ISF:</label>
-                        <input type="text"/>
-                        <label class="post-info"> mmol/L</label>
-                    </div>
-                </fieldset>
-                <br/>
-                <fieldset class="withBorder">
-                    <legend>Severe Hypoglycaemia Events In The Past Year</legend>
-                    <label class="firstColumn">Seizure</label>
-                    <input type="text" style="float: left;" value="0"/>
-                    <label class="firstColumn">&nbsp;&nbsp;Coma</label>
-                    <input type="text" value="0"/>
-                    <br/>
-                </fieldset>
-                <br/>
+                <?php require('doc_main_form.php');?>
                 <input type="button" value="Next" onclick="showForm('formOne', 'formTwo')" style="float: right;" />
                 <input type="button" value="Cancel" onclick="history.back()" />
             </fieldset>
             <fieldset class="formTwo" style="display: none;">
-                <div>
-                    <div style="display: inline-table; width: 40%;">
-                        <h2>Pump - Basal Rates</h2>
-                        <div id="basalRates" class="handsontable"></div>
-                        <br/>
-                    </div>
-                    <div style="display: inline-table; width: 30%;">
-                        <h2>Blood Glucose Targets</h2>
-                        <div id="bgTargets" class="handsontable"></div>
-                    </div>
-                    <div style="display: inline-table; width: 25%;">
-                        <h2>Active Insulin</h2>
-                        <div id="activeIns" class="handsontable"></div>
-                    </div>
-                </div>
+                <?php require('doc_pump_metrics.php');?>
                 <input type="button" value="Next" onclick="showForm('formTwo', 'formThree')" style="float: right;" />
                 <input type="button" value="Previous" onclick="showForm('formTwo', 'formOne')" />
             </fieldset>
             <fieldset class="formThree" style="display: none;">
-                <div>
-                    <div style="display: inline-table; width: 40%;">
-                        <h2>Insulin - Carb Ratio</h2>
-                        <div id="carbRatio" class="handsontable"></div>
-                        <br/>
-                    </div>
-                    <div style="display: inline-table; width: 40%;">
-                        <h2>Insulin Sensitivity Factor</h2>
-                        <div id="isf" class="handsontable"></div>
-                    </div>
-                </div>
+                <?php require('doc_carb_ratios.php');?>
                 <input type="button" value="Next" onclick="showForm('formThree', 'formFour')" style="float: right;" />
                 <input type="button" value="Previous" onclick="showForm('formThree', 'formTwo')" />
             </fieldset>
             <fieldset class="formFour" style="display: none;">
-                <h2>Nursing Notes</h2>
-                <div style="display: inline-table; width: 50%">
-                    <label class="field widerColumn">Sick Day Rules:</label>
-                    <select>
-                        <option value="true">Yes</option>
-                        <option value="false" selected>No</option>
-                    </select>
-                    <br/>
-                    <label class="field widerColumn">Ketone Testing:</label>
-                    <select>
-                        <option value="true">Yes</option>
-                        <option value="false" selected>No</option>
-                    </select>
-                    <br/>
-                    <label class="field widerColumn">Record Keeping:</label>
-                    <select>
-                        <option value="true">Yes</option>
-                        <option value="false" selected>No</option>
-                    </select>
-                    <br/>
-                    <label class="field widerColumn">Alcohol:</label>
-                    <select>
-                        <option value="true">Yes</option>
-                        <option value="false" selected>No</option>
-                    </select>
-                    <br/>
-                    <label class="field widerColumn">Contraception:</label>
-                    <select>
-                        <option value="true">Yes</option>
-                        <option value="false" selected>No</option>
-                    </select>
-                    <br/>
-                </div>
-                <div style="display: inline-table;">
-                    <label class="field widerColumn">Hypoglycaemia rules:</label>
-                    <select>
-                        <option value="true">Yes</option>
-                        <option value="false" selected>No</option>
-                    </select>
-                    <br/>
-                    <label class="field widerColumn">Dietary Issues:</label>
-                    <select>
-                        <option value="true">Yes</option>
-                        <option value="false" selected>No</option>
-                    </select>
-                    <br/>
-                    <label class="field widerColumn">School:</label>
-                    <select>
-                        <option value="true">Yes</option>
-                        <option value="false" selected>No</option>
-                    </select>
-                    <br/>
-                    <label class="field widerColumn">Smoking:</label>
-                    <select>
-                        <option value="true">Yes</option>
-                        <option value="false" selected>No</option>
-                    </select>
-                    <br/>
-                </div>
-                <br/><br/>
-                <h3>Comments</h3>
-                <textarea rows="6" cols="50"></textarea>
+                <?php require('nurse_notes.php');?>
                 <input type="button" value="Next" onclick="showForm('formFour', 'formFive')" style="float: right;" />
                 <input type="button" value="Previous" onclick="showForm('formFour', 'formThree')" />
             </fieldset>
             <fieldset class="formFive" style="display: none;">
-                <div>
-                    <div style="display: inline-table; width: 50%;">
-                        <h2>Insulin - Carb Ratio</h2>
-                        <div id="dietHistory" class="handsontable"></div>
-                        <br/>
-                    </div>
-                    <div id="foodGroups" style="display: inline-table; width: 25%;">
-                        <h2>Food Groups Checklist</h2>
-                        <input type="checkbox">
-                        <label class="field widerColumn">Energy</label><br/>
-                        <input type="checkbox">
-                        <label class="field widerColumn">Iron</label><br/>
-                        <input type="checkbox">
-                        <label class="field widerColumn">Protein</label><br/>
-                        <input type="checkbox">
-                        <label class="field widerColumn">Oily Fish</label><br/>
-                        <input type="checkbox">
-                        <label class="field widerColumn">Fruit & Veg</label><br/>
-                        <input type="checkbox">
-                        <label class="field widerColumn">Legumes</label><br/>
-                        <input type="checkbox">
-                        <label class="field widerColumn">Calcium</label><br/>
-                        <input type="checkbox">
-                        <label class="field widerColumn">Multivit/Mins</label><br/>
-                    </div>
-                    <div id="carbCounting" style="display: inline-table; width: 20%;">
-                        <h2>Carb Counting</h2>
-                        <input type="checkbox">
-                        <label class="field widerColumn">Basic (Discussed at Dx)</label><br/>
-                        <input type="checkbox">
-                        <label class="field widerColumn">Reading Labels</label><br/>
-                        <input type="checkbox">
-                        <label class="field widerColumn">Weighing Portions</label><br/>
-                        <input type="checkbox">
-                        <label class="field widerColumn">Competent</label><br/>
-                    </div>
-                </div>
+                <?php require('nurse_notes.php');?>
                 <input type="button" value="Next" onclick="showForm('formFive', 'formSix')" style="float: right;" />
                 <input type="button" value="Previous" onclick="showForm('formFive', 'formFour')" />
             </fieldset>
             <fieldset class="formSix" style="display: none;">
-                <h2>Annual Bloods & Assessment</h2>
-                <div>
-                    <div style="display: inline-table; width: 50%;">
-                        <h2>Blood Pressure</h2>
-                        <label class="field">T4:</label>
-                        <input type="text"/>
-                        <label class="post-info"> pmols/L</label>
-                        <br/>
-                        <label class="field">TSH:</label>
-                        <input type="text"/>
-                        <label class="post-info"> mu/L</label>
-                        <br/>
-                        <label class="field">Coeliac:</label>
-                        <input type="text"/>
-                        <label class="post-info"> iu/L</label>
-                        <br/>
-                        <label class="field">Alb:Creat:</label>
-                        <input type="text"/>
-                        <label class="post-info"> mg/mmol</label>
-                        <br/>
-                        <label class="field">Cholesterol:</label>
-                        <input type="text"/>
-                        <label class="post-info"> mmol/L</label>
-                        <br/>
-                        <label class="field">Triglycerides:</label>
-                        <input type="text"/>
-                        <label class="post-info"> mmol/L</label>
-                        <br/>
-                    </div>
-                    <div style="display: inline-table; width: 40%;">
-                        <h2>Other</h2>
-                        <label class="field widerColumn">HDL:</label>
-                        <input type="text"/>
-                        <label class="post-info"> mmol/L</label>
-                        <br/>
-                        <label class="field widerColumn">Blood Pressure:</label>
-                        <input type="text"/>
-                        <label class="post-info"> mmol/L</label>
-                        <br/>
-                        <label class="field widerColumn">Retinal Screening:</label>
-                        <select>
-                            <option value="true">Yes</option>
-                            <option value="false" selected>No</option>
-                        </select>
-                        <br/>
-                        <label class="field widerColumn">Transition Letter:</label>
-                        <select>
-                            <option value="true">Yes</option>
-                            <option value="false" selected>No</option>
-                        </select>
-                        <br/>
-                        <label class="field widerColumn">Trans. Discussed:</label>
-                        <select>
-                            <option value="true">Yes</option>
-                            <option value="false" selected>No</option>
-                        </select>
-                        <br/>
-                        <label class="field widerColumn">Podiatry:</label>
-                        <select>
-                            <option value="true">Yes</option>
-                            <option value="false" selected>No</option>
-                        </select>
-                        <br/>
-                    </div>
-                </div>
-                <br/>
+                <?php require('doc_annual_notes.php');?>
                 <input type="button" value="Next" onclick="showForm('formSix', 'formSeven')" style="float: right;" />
                 <input type="button" value="Previous" onclick="showForm('formSix', 'formFive')" />
             </fieldset>

@@ -67,7 +67,7 @@ table.basalRates{
 
 #foodGroups .field,
 #carbCounting .field{
-    width: 100px;
+    width: 120px;
     float: none;
     font-weight: bold;
 }

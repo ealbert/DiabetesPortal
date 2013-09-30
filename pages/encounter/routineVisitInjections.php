@@ -1,8 +1,7 @@
 <?php
 session_start();
 $page_title = "Review";
-$header_stylesheet = '<link href="../../css/main.css" rel="stylesheet" type="text/css"/>';
-$header_stylesheet .= '<link href="../../css/review.css" rel="stylesheet" />';
+$header_stylesheet = '<link href="../../css/review.css" rel="stylesheet" />';
 $header_stylesheet .= '<link href="../../css/jquery.handsontable.full.css" rel="stylesheet" />';
 $header_scripts = '<script src="../../scripts/jquery.handsontable.full.js"></script>';
 $today = date("Y-m-d");
@@ -10,7 +9,9 @@ require_once('/../common/header.php');
 ?>
 <article id="PatientSummary" class="body">
     <header>
-        <h2>New Routine Visit [INJECTIONS]</h2>
+        <img src="../../Images/injection_logo_36.png" alt="Injection Logo" style="float: right;"/>
+        <h2>Routine Visit (Injections)</h2>
+        <div style="clear: both;"/>
     </header>
     <?php require('/../common/patientBoard.php');?>
 </article>
@@ -73,7 +74,7 @@ require_once('/../common/header.php');
             </fieldset>
             <fieldset class="formTwo" style="display: none;">
                 <div>
-                    <div style="display: inline-table; width: 40%;">
+                    <div style="display: inline-table; width: 90%;">
                         <h2>Injection Therapy</h2>
                         <div id="mdi" class="handsontable"></div>
                         <br/>

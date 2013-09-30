@@ -1,8 +1,7 @@
 <?php
 session_start();
 $page_title = "Review";
-$header_stylesheet = '<link href="../../css/main.css" rel="stylesheet" type="text/css"/>';
-$header_stylesheet .= '<link href="../../css/review.css" rel="stylesheet" />';
+$header_stylesheet = '<link href="../../css/review.css" rel="stylesheet" />';
 $header_stylesheet .= '<link href="../../css/jquery.handsontable.full.css" rel="stylesheet" />';
 $header_scripts = '<script src="../../scripts/jquery.handsontable.full.js"></script>';
 $today = date("Y-m-d");

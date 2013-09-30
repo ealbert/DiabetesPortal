@@ -10646,8 +10646,13 @@ var Handsontable = { //class namespace
             }
             else if(e.clientX || e.clientY)
             {
-                this.x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-                this.y = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+
+                var bodyScrollLeft = document.body == null ? 0 : document.body.scrollLeft;
+                var bodyScrollTop = document.body == null ? 0 : document.body.scrollTop;
+                var docScrollLeft = document.documentElement.scrollLeft;
+                this.x = e.clientX + bodyScrollLeft + docScrollLeft;
+                this.y = e.clientY + bodyScrollTop + document.documentElement.scrollTop;
+
             }
         }
     };
