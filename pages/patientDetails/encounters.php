@@ -8,20 +8,9 @@
             <ul>
                 <li><a href="../encounter/register.php">Register</a></li>
 <!--                <li><a href="../patientSearch/patientSearch.php">Diagnosis</a></li>-->
-                <li><a href="#">Routine Visit</a>
-                    <ul>
-                        <li><a href="../encounter/routineVisit.php">Pump</a></li>
-                        <li><a href="../encounter/routineVisitInjections.php">Injections</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Annual Review</a>
-                    <ul>
-                        <li><a href="../encounter/annualReview.php">Pump</a></li>
-                        <li><a href="../encounter/annualReviewInjections.php">Injections</a></li>
-                    </ul>
-                </li>
+                <li><a id="anchor-review" href="#">New Review</a></li>
+                <li><a id="anchor-admission" href="#">New Admission</a></li>
                 <li><a href="#">Delete</a></li>
-
             </ul>
             <br style="clear: left" />
         </div>
@@ -71,4 +60,19 @@
         </fieldset>
     </div>
 </article>
-<?php
+<?php require('../common/dialog_admission.php'); ?>
+<?php require('../common/dialog_review.php'); ?>
+<script type="text/javascript">
+
+    $(function () {
+        $("#anchor-review").click(function(){
+            $("#dialog-review button").attr('value', 'hello');
+            $("#dialog-review").dialog('open');
+        });
+
+        $("#anchor-admission").click(function(){
+            $("#dialog-admission button").attr('value', 'hello');
+            $("#dialog-admission").dialog('open');
+        });
+    });
+</script>

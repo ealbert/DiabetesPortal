@@ -1,6 +1,6 @@
 <div id="pageMenu" class="mainMenu jqueryslidemenu">
     <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="../home/home.php">Home</a></li>
         <li><a href="#">Patient</a>
             <ul>
                 <li><a href="../patientSearch/patientSearch.php">Search</a></li>

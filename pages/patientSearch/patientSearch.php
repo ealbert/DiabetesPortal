@@ -42,7 +42,8 @@ require_once('/../common/header.php');
                     <td>21-Feb-2003</td>
                     <td><a href="../patientDetails/patientDetails.php">56452354</a></td>
                     <td>
-                        <button id="button-review" type="submit" value="12345" name="patientId">New Review</button>
+                        <button class="button-review" type="submit" value="12345" name="patientId">New Review</button>
+                        <button class="button-admin" type="submit" value="12345" name="patientId">New Admission</button>
                     </td>
                 </tr>
                 </tbody>
@@ -50,30 +51,10 @@ require_once('/../common/header.php');
         </fieldset>
     </section>
 </article>
-<div id="dialog-review" title="Create a new review encounter" style="display: none">
-    <h2>Patient uses a pump</h2>
-    <img src="../../Images/pump_logo.png" alt="Injection Logo"  style="display: inline-block;"/>
-    <div style="display: inline-block; vertical-align: top; " >
-        <form action="../encounter/routineVisit.php" method="get">
-            <button class="dialog-button" type="submit" value="12345" name="patientId">New Routine Visit</button>
-        </form>
-        <form action="../encounter/annualReview.php" method="get">
-            <button class="dialog-button" type="submit" value="12345" name="patientId">Annual Review</button>
-        </form>
-    </div>
-    <br/>
-    <br/>
-    <h2>Patient uses injections</h2>
-    <img src="../../Images/injection_logo.png" alt="Injection Logo" style="display: inline-block;"/>
-    <div style="display: inline-block; vertical-align: top; " >
-        <form action="../encounter/routineVisitInjections.php" method="get">
-            <button class="dialog-button" type="submit" value="12345" name="patientId">New Routine Visit</button>
-        </form>
-        <form action="../encounter/annualReviewInjections.php" method="get">
-            <button class="dialog-button" type="submit" value="12345" name="patientId">Annual Review</button>
-        </form>
-    </div>
-</div>
+
+<?php require('../common/dialog_review.php'); ?>
+<?php require('../common/dialog_admission.php'); ?>
+
 <script type="text/javascript">
     $("#searchForm").submit(function(){
        $("#searchResults").fadeIn('slow');
@@ -81,21 +62,14 @@ require_once('/../common/header.php');
     });
 
     $(function () {
-        $("#dialog-review").dialog({
-            modal: true,
-            width: 320,
-            show: 1000,
-            hide: 1500,
-            autoOpen: false,
-            buttons: {
-                Cancel: function () {
-                    $(this).dialog("close");
-                }
-            }
+        $(".button-review").click(function(){
+            $("#dialog-review button").attr('value', 'hello');
+            $("#dialog-review").dialog('open');
         });
 
-        $("#button-review").click(function(){
-            $("#dialog-review").dialog('open');
+        $(".button-admin").click(function(){
+            $("#dialog-admission button").attr('value', 'hello');
+            $("#dialog-admission").dialog('open');
         });
     });
 </script>

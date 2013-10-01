@@ -43,3 +43,13 @@ section#metrics ul { border: none !important; border-collapse: separate; border-
 section#metrics li { background: #767676 !important; display: inline-block; float: left; vertical-align: middle; border-radius: 5px 0; text-align: center; color: white; width: 5.3em; height: 4em; padding: .25em !important; line-height: .9; text-transform: uppercase; margin-right: 5px; }
 section#metrics p {font-size: 18px; font-weight: bold; }
 
+.ui-widget-overlay.custom-overlay
+{
+    background-color: black;
+    background-image: none;
+    opacity: 0.75;
+    filter: alpha(opacity=75); /* IE 7 and Earlier */
+    /* Next 2 lines IE8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
+}
