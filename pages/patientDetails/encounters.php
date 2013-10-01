@@ -7,7 +7,7 @@
         <div id="encounterMenu"class="dynamicMenu jqueryslidemenu">
             <ul>
                 <li><a href="../encounter/register.php">Register</a></li>
-                <li><a href="../patientSearch/patientSearch.php">Diagnosis</a></li>
+<!--                <li><a href="../patientSearch/patientSearch.php">Diagnosis</a></li>-->
                 <li><a href="#">Routine Visit</a>
                     <ul>
                         <li><a href="../encounter/routineVisit.php">Pump</a></li>
