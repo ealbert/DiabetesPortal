@@ -35,3 +35,24 @@
         <label class="field widerColumn">Competent</label><br/>
     </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        var dietHistories = [
+            [""], [""], [""], [""], [""], [""], [""]
+        ];
+
+        $('#dietHistory').handsontable({
+            data: dietHistories,
+            minSpareRows: 0,
+            rowHeaders: false,
+            contextMenu: false,
+            colWidths: 400,
+            columns: [
+                {type: 'text'}
+            ],
+            rowHeaders: ["Breakfast", "Snack", "Lunch", "Snack", "Diner", "Bedtime", "Sports"]
+        });
+    });
+
+</script>
