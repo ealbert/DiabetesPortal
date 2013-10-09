@@ -51,3 +51,10 @@
     background-color: lightgrey!important;
     color: #B0B0B0;
 }
+
+.dialog-button[type='submit'] {
+    border-radius: 5px;
+    padding: .3em 1.3em;
+    width: 180px;
+    margin-bottom: 10px;
+}
