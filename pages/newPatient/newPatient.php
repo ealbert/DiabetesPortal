@@ -54,6 +54,8 @@ require_once('/../common/header.php');
                             <option value="blank">-- select one diabetes type --</option>
                             <option value="type1">T1DM</option>
                             <option value="type2">T2DM</option>
+                            <option value="type3">MODY</option>
+                            <option value="type4">PNDM</option>
                         </select>
                         <br/>
                         <label class="field">Uses Pump:</label>

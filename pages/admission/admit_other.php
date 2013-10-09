@@ -19,6 +19,14 @@ require_once('/../common/header.php');
             <fieldset class="formOne">
                 <fieldset class="withBorder">
                     <legend>Admission Details</legend>
+                    <label class="wideLabel">Type of Admission:</label>
+                    <select>
+                        <option selected>Other</option>
+                        <option>Intercurrent illness</option>
+                        <option>Surgical procedure</option>
+                        <option>Stabilisation/reeducation</option>
+                    </select>
+                    <br/>
                     <label class="wideLabel">Date of Admission:</label><input type="date"/><br/>
                     <label class="wideLabel">Date of Discharge:</label><input type="date"/><br/>
                 </fieldset>

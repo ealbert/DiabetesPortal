@@ -2,7 +2,7 @@
 <div>
     <div style="display: inline-table; width: 50%;">
         <h2>Blood Pressure</h2>
-        <label class="field">T4:</label>
+        <label class="field">FT4:</label>
         <input type="text"/>
         <label class="post-info"> pmols/L</label>
         <br/>
@@ -26,6 +26,10 @@
         <input type="text"/>
         <label class="post-info"> mmol/L</label>
         <br/>
+        <label class="field">TPO:</label>
+        <input type="text"/>
+        <label class="post-info"> iu/L</label>
+        <br/>
     </div>
     <div style="display: inline-table; width: 40%;">
         <h2>Other</h2>
@@ -35,12 +39,15 @@
         <br/>
         <label class="field widerColumn">Blood Pressure:</label>
         <input type="text"/>
-        <label class="post-info"> mmol/L</label>
+        <label class="post-info"> mmHg</label>
         <br/>
-        <label class="field widerColumn">Retinal Screening:</label>
+        <label class="field widerColumn">Ret. Screening Date:</label>
+        <input type="date"></type>
+        <br/>
+        <label class="field widerColumn">Retinopathy:</label>
         <select>
-            <option value="true">Yes</option>
-            <option value="false" selected>No</option>
+            <option value="abnormal">Abnormal</option>
+            <option value="normal" selected>Normal</option>
         </select>
         <br/>
         <label class="field widerColumn">Transition Letter:</label>

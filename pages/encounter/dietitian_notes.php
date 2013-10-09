@@ -51,7 +51,7 @@
             columns: [
                 {type: 'text'}
             ],
-            rowHeaders: ["Breakfast", "Snack", "Lunch", "Snack", "Diner", "Bedtime", "Sports"]
+            rowHeaders: ["Breakfast", "Snack", "Lunch", "Snack", "Dinner", "Bedtime", "Sports"]
         });
     });
 

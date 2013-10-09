@@ -14,7 +14,7 @@
             data: mdiRecords,
             minSpareRows: 1,
             maxRows: 4,
-            colHeaders: ["Insuline Type", "Old", "New", "Old", "New", "Old", "New", "Old", "New"],
+            colHeaders: ["Insulin Type", "Old", "New", "Old", "New", "Old", "New", "Old", "New"],
             contextMenu: false,
             colWidths: [200, 45, 45, 45, 45, 45, 45, 45, 45],
             columns: [
