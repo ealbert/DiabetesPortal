@@ -3,8 +3,10 @@
         getChart();
     });
 
-    function showForm(formToClose, formToShow){
-        $("." + formToClose).hide();
-        $("." + formToShow).show();
-    };
+    function showForm(event, formToShow){
+        $("#reviewMenu a").removeClass("currentForm");
+        $(event.target).addClass("currentForm");
+        $(".reviewSubForm").hide();
+        $("#" + formToShow).show();
+    }
 </script>

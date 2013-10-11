@@ -76,3 +76,10 @@ table.basalRates{
 #carbCounting input[type="checkbox"]{
     display: inline;
 }
+
+/* Style For The Reviews*/
+.jqueryslidemenu ul li a.currentForm {
+    background: #d3d3d3;
+    /*black; *//*tab link background during hover state*/
+    color: dodgerblue;
+}

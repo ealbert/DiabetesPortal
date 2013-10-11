@@ -50,7 +50,8 @@
     color: white;
 }
 
-.jqueryslidemenu ul li a:hover {
+.jqueryslidemenu ul li a:hover
+{
     background: rgb(199, 67, 80);
     /*black; *//*tab link background during hover state*/
     color: white;

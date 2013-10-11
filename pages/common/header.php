@@ -28,7 +28,8 @@
 <!--[if lt IE 9 ]>
 <body id="index" class="home ieLegacy"> <![endif]-->
 <!--[if (gt IE 8)|!(IE)]><!-->
-<body id="index" class="home"><!--<![endif]-->
+<body id="index" class="home">
+<!--<![endif]-->
 <header id="banner" class="body">
 
     <?php

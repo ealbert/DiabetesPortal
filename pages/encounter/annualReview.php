@@ -20,46 +20,50 @@ require_once('/../common/header.php');
 <article id="ReviewDetails" class="body">
     <section>
         <form id="reviewForm" action="../patientDetails/patientDetails.php" method="post">
-            <fieldset class="formOne">
-                <input type="button" value="Next" onclick="showForm('formOne', 'formTwo')" style="float: right;" />
-                <input type="button" value="Cancel" onclick="history.back()" /><br/><br/>
+            <fieldset>
+                <input type="submit" value="Save" style="float: right; margin-top: 5px; margin-right: 10px; "/>
+                <div id="reviewMenu"class="dynamicMenu jqueryslidemenu">
+                    <ul>
+                        <li><a href="#" onclick="showForm(event, 'doc_main_form')" class="currentForm">Review Notes</a></li>
+                        <li><a href="#" onclick="showForm(event, 'doc_pump_metrics')">Pump</a></li>
+                        <li><a href="#" onclick="showForm(event, 'doc_carb_ratios')">Carb. Ratios</a></li>
+                        <li><a href="#" onclick="showForm(event, 'nurse_notes')">Nurse Notes</a></li>
+                        <li><a href="#" onclick="showForm(event, 'dietitian_notes')">Dietitian Notes</a></li>
+                        <li><a href="#" onclick="showForm(event, 'doc_annual_notes')">Annual Notes</a></li>
+                        <li><a href="#" onclick="showForm(event, 'doc_review_comments')">Comments</a></li>
+                    </ul>
+                    <br style="clear: left" />
+                </div>
+            </fieldset>
+            <fieldset id="doc_main_form" class="reviewSubForm">
                 <?php require('doc_main_form.php');?>
             </fieldset>
-            <fieldset class="formTwo" style="display: none;">
-                <input type="button" value="Next" onclick="showForm('formTwo', 'formThree')" style="float: right;" />
-                <input type="button" value="Previous" onclick="showForm('formTwo', 'formOne')" /><br/><br/>
+            <fieldset id="doc_pump_metrics" class="reviewSubForm" style="display: none;">
                 <?php require('doc_pump_metrics.php');?>
             </fieldset>
-            <fieldset class="formThree" style="display: none;">
-                <input type="button" value="Next" onclick="showForm('formThree', 'formFour')" style="float: right;" />
-                <input type="button" value="Previous" onclick="showForm('formThree', 'formTwo')" /><br/><br/>
+            <fieldset id="doc_carb_ratios" class="reviewSubForm" style="display: none;">
                 <?php require('doc_carb_ratios.php');?>
             </fieldset>
-            <fieldset class="formFour" style="display: none;">
-
-                <input type="button" value="Next" onclick="showForm('formFour', 'formFive')" style="float: right;" />
-                <input type="button" value="Previous" onclick="showForm('formFour', 'formThree')" /><br/><br/>
+            <fieldset id="nurse_notes" class="reviewSubForm" style="display: none;">
                 <?php require('nurse_notes.php');?>
             </fieldset>
-            <fieldset class="formFive" style="display: none;">
-
-                <input type="button" value="Next" onclick="showForm('formFive', 'formSix')" style="float: right;" />
-                <input type="button" value="Previous" onclick="showForm('formFive', 'formFour')" /><br/><br/>
+            <fieldset id="dietitian_notes" class="reviewSubForm" style="display: none;">
                 <?php require('dietitian_notes.php');?>
             </fieldset>
-            <fieldset class="formSix" style="display: none;">
-                <input type="button" value="Next" onclick="showForm('formSix', 'formSeven')" style="float: right;" />
-                <input type="button" value="Previous" onclick="showForm('formSix', 'formFive')" /><br/><br/>
+            <fieldset id="doc_annual_notes" class="reviewSubForm" style="display: none;">
                 <?php require('doc_annual_notes.php');?>
             </fieldset>
-            <fieldset class="formSeven" style="display: none;">
-                <input type="button" value="Previous" onclick="showForm('formSeven', 'formSix')" /><br/><br/>
+            <fieldset id="doc_review_comments" class="reviewSubForm" style="display: none;">
                 <?php require('doc_review_comments.php');?>
-                <input type="submit" value="Save" style="float: right;"/>
             </fieldset>
         </form>
     </section>
 </article>
+<script>
+    $(function(){
+        jqueryslidemenu.buildmenu("reviewMenu", arrowimages);
+    });
+</script>
 <?php
 $footer_scripts = '';
 require_once('/../../templates/pageComments/routineVisit.html');
