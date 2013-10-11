@@ -10,11 +10,19 @@ require_once('/../common/header.php');
         <h2>Patient Demographics</h2>
     </header>
     <?php require('/../common/patientBoard.php');?>
+    <div id="sectionsMenu" class="jqueryslidemenu">
+        <ul>
+            <li><a href="#" onclick="showSection(event, 'details')">Patient Details</a></li>
+            <li><a href="#" onclick="showSection(event, 'encounters')" class="currentSection">Encounters</a></li>
+        </ul>
+        <br style="clear: left" />
+    </div>
     <?php require('detailsSection.php');?>
     <?php require('encounters.php');?>
 <script type="text/javascript">
     $(document).ready(function(){
-        $("article .section").hide();
+        $("#section-details").hide();
+        /*
         $(".toggler").click(function(){
             var section = this.attributes['id'].value;
             if(!section) return;
@@ -37,22 +45,20 @@ require_once('/../common/header.php');
                 });
             }
         });
+        */
         <!--  Set table even rows to grey      -->
         $(".sectionLog tbody tr:even").addClass("grey-row");
-
-        <!--  Toggles the check box in the records of the log section      -->
-        // $(".sectionLog thead input[type*='checkbox']").click(function(){deleteCheckBoxToggle($(this)); });
-
-        <!--  Short cuts -->
-        Mousetrap.bind(['command+1', 'ctrl+1'], function(e) {
-            $("#sectionDetails").click();
-            if($("#sectionDetails-icon").hasClass("closed")){
-                $("#sectionDetails").parent().find("input:first").focus();
-            }
-        });
-
         getChart();
     });
+
+    function showSection(event, sectionToOpen){
+        $("#sectionsMenu a").removeClass("currentSection");
+        event = event || window.event;
+        var targetElement = event.target || event.srcElement;
+        $(targetElement).addClass("currentSection");
+        $(".section").slideUp();
+        $("#section-" + sectionToOpen).slideDown();
+    }
 </script>
 
 <?php

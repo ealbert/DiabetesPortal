@@ -58,3 +58,10 @@
     width: 180px;
     margin-bottom: 10px;
 }
+
+/* Section Menus */
+/* Style For The Reviews*/
+.jqueryslidemenu ul li a.currentSection {
+    background: #d3d3d3;
+    color: dodgerblue;
+}

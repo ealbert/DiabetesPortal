@@ -1,13 +1,8 @@
-<article id="Outgoing">
-    <div id="sectionOutgoing" class="toggler" >
-        <span id="sectionOutgoing-icon" class="closed"></span>
-        <span>Encounters</span>
-    </div>
-    <div id="sectionOutgoing-details" class="section sectionLog">
-        <div id="encounterMenu"class="dynamicMenu jqueryslidemenu">
+<article id="Encounters">
+    <div id="section-encounters" class="section sectionLog" style="margin-top: -10px;">
+        <div id="menu-encounters"class="jqueryslidemenu">
             <ul>
                 <li><a href="../encounter/register.php">Register</a></li>
-<!--                <li><a href="../patientSearch/patientSearch.php">Diagnosis</a></li>-->
                 <li><a id="anchor-review" href="#">New Review</a></li>
                 <li><a id="anchor-admission" href="#">New Admission</a></li>
                 <li><a href="#">Delete</a></li>

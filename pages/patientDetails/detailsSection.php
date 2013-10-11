@@ -1,9 +1,5 @@
 <article id="Details">
-    <div id="sectionDetails" class="toggler" title="Toggle shortcut [CTRL]+1">
-        <span id="sectionDetails-icon" class="closed"></span>
-        <span>Patient Details</span>
-    </div>
-    <form id="sectionDetails-details" class="section">
+    <form id="section-details" class="section">
         <fieldset class="withBorder">
             <div>
                 <div style="float: left">

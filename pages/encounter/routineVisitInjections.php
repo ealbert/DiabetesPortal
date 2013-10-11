@@ -22,7 +22,7 @@ require_once('/../common/header.php');
         <form id="reviewForm" action="../patientDetails/patientDetails.php" method="post">
             <fieldset>
                 <input type="submit" value="Save" style="float: right; margin-top: 5px; margin-right: 10px; "/>
-                <div id="reviewMenu"class="dynamicMenu jqueryslidemenu">
+                <div id="reviewMenu"class="jqueryslidemenu">
                     <ul>
                         <li><a href="#" onclick="showForm(event, 'doc_main_form')" class="currentForm">Review Notes</a></li>
                         <li><a href="#" onclick="showForm(event, 'doc_injection_form')">Injections</a></li>
