@@ -1,7 +1,7 @@
 <?php
 session_start();
 $page_title = "PatientDetails";
-$header_stylesheet = '<link href="../../css/main.css" rel="stylesheet" type="text/css"/>';
+$header_stylesheet = '';
 $header_scripts = '';
 require_once('/../common/header.php');
 ?>

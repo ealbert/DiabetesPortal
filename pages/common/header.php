@@ -9,9 +9,9 @@
     <link href="../../images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
     <?php echo "<title>Diabetes Portal - $page_title</title>" ?>
     <!-- Styles   -->
-    <link href="../../css/main.css" rel="stylesheet"/>
     <link href="../../css/base/jquery-ui.css" rel="stylesheet" type="text/css">
     <link href="../../css/jqueryslidemenu.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/main.css" rel="stylesheet" type="text/css"/>
     <?php echo $header_stylesheet ?> <!-- Place holder for additional page stylesheets -->
     <!-- JavaScript Files    -->
     <script src="../../scripts/jquery-1.10.2.min.js"></script>

@@ -65,3 +65,17 @@
     background: #d3d3d3;
     color: dodgerblue;
 }
+
+#menu-encounters{
+    background-color: rgb(211, 211, 211);
+}
+#menu-encounters.jqueryslidemenu ul li a{
+    background-color: rgb(211, 211, 211);
+    color: dodgerblue;
+}
+
+#menu-encounters.jqueryslidemenu ul li a:hover {
+    background: rgb(199, 67, 80);
+    /*black; *//*tab link background during hover state*/
+    color: white;
+}
