@@ -44,6 +44,7 @@ require_once('/../common/header.php');
                     <td>
                         <button class="button-review" type="submit" value="12345" name="patientId">New Review</button>
                         <button class="button-admin" type="submit" value="12345" name="patientId">New Admission</button>
+                        <button class="button-telephone" type="submit" value="12345" name="patientId">New Call</button>
                     </td>
                 </tr>
                 </tbody>
@@ -54,6 +55,7 @@ require_once('/../common/header.php');
 
 <?php require('../common/dialog_review.php'); ?>
 <?php require('../common/dialog_admission.php'); ?>
+<?php require('../common/dialog_telephone.php'); ?>
 
 <script type="text/javascript">
     $("#searchForm").submit(function(){
@@ -63,13 +65,15 @@ require_once('/../common/header.php');
 
     $(function () {
         $(".button-review").click(function(){
-            $("#dialog-review button").attr('value', 'hello');
             $("#dialog-review").dialog('open');
         });
 
         $(".button-admin").click(function(){
-            $("#dialog-admission button").attr('value', 'hello');
             $("#dialog-admission").dialog('open');
+        });
+
+        $(".button-telephone").click(function(){
+            $("#dialog-telephone").dialog('open');
         });
     });
 </script>
