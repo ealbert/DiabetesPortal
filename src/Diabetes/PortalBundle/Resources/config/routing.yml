@@ -6,6 +6,10 @@ portal_homepage:
     pattern:  /user
     defaults: { _controller: PortalBundle:Home:home }
 
+patient_search:
+    pattern:  /patient/search
+    defaults: { _controller: PortalBundle:Patient/PatientSearch:index }
+
 portal_login:
     pattern: /login
     defaults: { _controller: PortalBundle:Security:login }
