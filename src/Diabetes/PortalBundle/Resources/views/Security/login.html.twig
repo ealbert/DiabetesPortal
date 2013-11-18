@@ -1,0 +1,37 @@
+{% extends 'PortalBundle::base.html.twig' %}
+{% block header_styles %}
+    <link href="{{ asset('bundles/portal/css/login-box.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block body %}
+    <article id="login-wrapper">
+        <div id="login-box">
+            <form id="loginForm" action="{{  path('portal_login_check') }}" method="post">
+                <H2>Login</H2>
+                Access to this site is restricted to only authorised users.
+                Contact help support in case of having problems login into the site.
+                <div class="login-box-name" style="margin-top:20px;">User Id:</div>
+                <div class="login-box-field">
+                    <input name="_username" class="form-login" title="Username" value="{{  last_username }}" size="30" maxlength="2048"/>
+                </div>
+                <div class="login-box-name" style="margin-top: 10px;">Password:</div>
+                <div class="login-box-field">
+                    <input name="_password" type="password" class="form-login" title="Password" value="" size="30"
+                           maxlength="2048"/>
+                </div>
+                <span class="login-box-options">
+                    <!--<input type="checkbox" name="1" value="1"> Remember Me -->
+                    <a href="#">Forgot password?</a>
+                </span>
+                <br/>
+                <br/>
+                <a class="noHoverEffect" href="#" onclick="document.getElementById('loginForm').submit();">
+                    <img src="{{ asset('bundles/portal/images/login-btn.png') }}"/>
+                </a>
+            </form>
+            {% if error %}
+                <div>{{ error.message }}</div>
+            {% endif %}
+        </div>
+    </article>
+{% endblock %}

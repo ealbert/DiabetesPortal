@@ -1,0 +1,7 @@
+parameters:
+#    portal.example.class: Diabetes\PortalBundle\Example
+
+services:
+#    portal.example:
+#        class: %portal.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

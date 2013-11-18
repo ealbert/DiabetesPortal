@@ -1,0 +1,24 @@
+{% extends 'PortalBundle::base.html.twig' %}
+{% block header_styles %}
+    <link href="{{ asset('bundles/portal/css/patientSearch.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block body %}
+<article class="body">
+    <h2>Home Page</h2>
+    <section style="width: 50%; margin-right: auto; margin-left: auto; margin-top: 20%;">
+        <hgroup>
+            <h3>Page in progress</h3>
+        </hgroup>
+        <fieldset>
+            <p>
+                This page could contain a dashboard/summary panel for the user.
+            </p>
+            <p>
+                The page should also include a comprehensive section in regards disclaimers, rules,
+                policies and so on.
+            </p>
+        </fieldset>
+    </section>
+</article>
+{% endblock %}

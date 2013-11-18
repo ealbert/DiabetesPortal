@@ -1,0 +1,4 @@
+portal:
+    resource: "@PortalBundle/Resources/config/routing.yml"
+    prefix:   /
+

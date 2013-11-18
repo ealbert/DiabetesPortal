@@ -215,3 +215,16 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+#Symfony
+/path/web/bundles/
+/path/app/bootstrap.php.cache
+/path/app/cache/*
+/path/app/config/parameters.yml
+/path/app/logs/*
+!/path/app/cache/.gitkeep
+!/path/app/logs/.gitkeep
+/path/build/
+/path/vendor/
+/path/bin/
+/path/composer.phar

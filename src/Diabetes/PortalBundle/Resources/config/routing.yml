@@ -1,0 +1,20 @@
+default:
+  pattern:  /
+  defaults: { _controller: PortalBundle:Home:home }
+
+portal_homepage:
+    pattern:  /user
+    defaults: { _controller: PortalBundle:Home:home }
+
+portal_login:
+    pattern: /login
+    defaults: { _controller: PortalBundle:Security:login }
+
+portal_login_check:
+    pattern: /loginCheck
+
+portal_logout:
+    pattern: /logout
+
+
+
