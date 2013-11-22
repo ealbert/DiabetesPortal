@@ -1,0 +1,46 @@
+{% extends 'PortalBundle::base.html.twig' %}
+{% block title %}
+    Diabetes Portal - Patient Dashboard
+{% endblock %}
+{% block header_styles %}
+    <link href="{{ asset('bundles/portal/css/main.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('bundles/portal/css/patientSearch.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block body %}
+    <article id="PatientSummary" class="body">
+        <header>
+            <h2>Patient Demographics</h2>
+        </header>
+        {{ include('PortalBundle:Patient/Common:patient_summary.html.twig') }}
+        <div id="sectionsMenu" class="jqueryslidemenu">
+            <ul>
+                <li><a href="#" onclick="showSection(event, 'details')">Patient Details</a></li>
+                <li><a href="#" onclick="showSection(event, 'encounters')" class="currentSection">Encounters</a></li>
+            </ul>
+            <br style="clear: left" />
+        </div>
+        {{ include('PortalBundle:Patient/Dashboard:detailsSection.html.twig') }}
+        {{ include('PortalBundle:Patient/Dashboard:encounters.html.twig') }}
+    </article>
+{% endblock %}
+
+{% block footer_js %}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#section-details").hide();
+            <!--  Set table even rows to grey      -->
+            $(".sectionLog tbody tr:even").addClass("grey-row");
+            getChart();
+        });
+
+        function showSection(event, sectionToOpen){
+            $("#sectionsMenu a").removeClass("currentSection");
+            event = event || window.event;
+            var targetElement = event.target || event.srcElement;
+            $(targetElement).addClass("currentSection");
+            $(".section").slideUp();
+            $("#section-" + sectionToOpen).slideDown();
+        }
+    </script>
+{% endblock %}

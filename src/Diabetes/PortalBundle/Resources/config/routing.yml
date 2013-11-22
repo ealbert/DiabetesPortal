@@ -10,6 +10,14 @@ patient_search:
     pattern:  /patient/search
     defaults: { _controller: PortalBundle:Patient/PatientSearch:index }
 
+patient_dashboard:
+    pattern:  /patient/dashboard/{id}
+    defaults: { _controller: PortalBundle:Patient/PatientDashboard:index }
+
+patient_chart:
+    pattern:  /patient/chart/{id}
+    defaults: { _controller: PortalBundle:Patient/PatientCommon:getChart }
+
 portal_login:
     pattern: /login
     defaults: { _controller: PortalBundle:Security:login }
