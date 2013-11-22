@@ -2,7 +2,10 @@
 namespace Diabetes\PortalBundle\Controller\Patient;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+use Symfony\Component\HttpFoundation\Response;
+use Xlab\pChartBundle\pData;
+use Xlab\pChartBundle\pDraw;
+use Xlab\pChartBundle\pImage;
 
 class PatientCommonController extends Controller
 {
@@ -13,6 +16,8 @@ class PatientCommonController extends Controller
 //        require_once($this->get('kernel')->getRootDir() . '/../vendor/pChart/class/pData.class.php');
 //        require_once($this->get('kernel')->getRootDir() . '/../vendor/pChart/class/pDraw.class.php');
 //        require_once($this->get('kernel')->getRootDir() . '/../vendor/pChart/class/pImage.class.php');
+
+        $response = new Response();
 
         if(isset($_SESSION['counter'])){
             $_SESSION['counter'] = $_SESSION['counter'] + 1;
@@ -33,9 +38,12 @@ class PatientCommonController extends Controller
         $myData->setSerieWeight("avg", 1);
         $myData->setAxisName(0,"HbA1c %");
 
-        $myPicture = new \pChart_pImage(400,140,$myData);
+        $myPicture = new  \pChart_pImage(400,140,$myData);
         $myPicture->setGraphArea(50,10,390,110);
-        //$myPicture->setFontProperties(array("FontName"=>"../../pChart/fonts/trebuc.ttf","FontSize"=>8));
+        $webPath = $this->get('kernel')->getRootDir() . '/../web';
+        $fontPath = $webPath."/fonts/trebuc.ttf";
+
+        $myPicture->setFontProperties(array("FontName"=>$fontPath,"FontSize"=>8));
         $myPicture->drawScale();
 
         $Config = array("BreakVoid"=>FALSE);
@@ -43,10 +51,17 @@ class PatientCommonController extends Controller
         $myPicture->drawText(340, 10, "V0.".$_SESSION['counter']);
 
         if(isset($_REQUEST["getImage"])){
-            return $myPicture->stroke();
+            $response->setContent($myPicture->stroke());
+        }
+        else{
+            ob_start();
+            imagepng($myPicture->Picture);
+            $contents =  ob_get_contents();
+            ob_end_clean();
+            $response->setContent(base64_encode($contents));
         }
 
-        return $myPicture->strokeToBase64();
+        return $response;
 
 //        return $this->render('PortalBundle:Patient/Search:index.html.twig');
     }
