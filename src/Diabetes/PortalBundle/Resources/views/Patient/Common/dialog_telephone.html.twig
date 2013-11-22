@@ -1,6 +1,6 @@
 <div id="dialog-telephone" title="Create a new telephone encounter" style="display: none">
     <h2>Patient uses a pump</h2>
-    <img src="{{ asset('bundles/portal/images/pump_logo.png') }}" alt="Injection Logo"  style="display: inline-block;"/>
+    <img src="{{ asset('images/pump_logo.png') }}" alt="Injection Logo"  style="display: inline-block;"/>
     <div style="display: inline-block; vertical-align: top; " >
         <form action="../encounter/telephonePump.php" method="get">
             <button class="dialog-button" type="submit" value="12345" name="patientId">Call Received</button>
@@ -14,7 +14,7 @@
     <br/>
     <br/>
     <h2>Patient uses injections</h2>
-    <img src="{{ asset('bundles/portal/images/injection_logo.png') }}" alt="Injection Logo" style="display: inline-block;"/>
+    <img src="{{ asset('images/injection_logo.png') }}" alt="Injection Logo" style="display: inline-block;"/>
     <div style="display: inline-block; vertical-align: top; " >
         <form action="../encounter/telephoneInjections.php" method="get">
             <button class="dialog-button" type="submit" value="12345" name="patientId">Call Received</button>

@@ -1,6 +1,6 @@
 {% extends 'PortalBundle::base.html.twig' %}
 {% block header_styles %}
-    <link href="{{ asset('bundles/portal/css/login-box.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/login-box.css') }}" rel="stylesheet" type="text/css">
 {% endblock %}
 
 {% block body %}
@@ -26,7 +26,7 @@
                 <br/>
                 <br/>
                 <a class="noHoverEffect" href="#" onclick="document.getElementById('loginForm').submit();">
-                    <img src="{{ asset('bundles/portal/images/login-btn.png') }}"/>
+                    <img src="{{ asset('images/login-btn.png') }}"/>
                 </a>
             </form>
             {% if error %}
