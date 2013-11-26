@@ -14,6 +14,14 @@ patient_dashboard:
     pattern:  /patient/dashboard/{id}
     defaults: { _controller: PortalBundle:Patient/PatientDashboard:index }
 
+patient_register:
+    pattern: /patient/register/{id}
+    defaults: {_controller: PortalBundle:Patient/PatientRegister:index }
+
+patient_register_save:
+    pattern: /patient/register/save/{id}
+    defaults: {_controller: PortalBundle:Patient/PatientRegister:save }
+
 patient_chart:
     pattern:  /patient/chart/{id}
     defaults: { _controller: PortalBundle:Patient/PatientCommon:getChart }
