@@ -225,6 +225,6 @@ pip-log.txt
 !/path/app/cache/.gitkeep
 !/path/app/logs/.gitkeep
 /build/
-#/vendor/
+/vendor/
 #/bin/
 #/composer.phar
