@@ -1,0 +1,24 @@
+{% extends 'PortalBundle::base.html.twig' %}
+{% block title %}
+    Diabetes Portal - Routine Review
+{% endblock %}
+{% block header_styles %}
+    <link href="{{ asset('css/review.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/jquery.handsontable.full.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block header_js %}
+    <script src="{{ asset('js/jquery.handsontable.full.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <article id="PatientSummary" class="body">
+        <header>
+            <img src="{{ asset('images/pump_logo_36.png') }}" alt="Pump Logo" style="float: right;"/>
+            <h2>Routine Visit (Pump)</h2>
+            <div style="clear: both;"/>
+        </header>
+        {{ include('PortalBundle:Patient/Common:patient_summary.html.twig') }}
+        {{ include('PortalBundle:Patient/Encounter:encounter_common.html.twig') }}
+    </article>
+
+{% endblock %}

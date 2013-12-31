@@ -2,7 +2,7 @@
     <h2>Patient uses a pump</h2>
     <img src="{{ asset('images/pump_logo.png') }}" alt="Injection Logo"  style="display: inline-block;"/>
     <div style="display: inline-block; vertical-align: top; " >
-        <form action="../encounter/routineVisit.php" method="get">
+        <form action="{{ path('patient_review', {'reviewType':'routine', 'treatmentType':'pump', 'patientId':'0'}) }}" method="get">
             <button class="dialog-button" type="submit" value="12345" name="patientId">New Routine Visit</button>
         </form>
         <form action="../encounter/annualReview.php" method="get">
