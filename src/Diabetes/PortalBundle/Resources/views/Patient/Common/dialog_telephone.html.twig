@@ -2,13 +2,11 @@
     <h2>Patient uses a pump</h2>
     <img src="{{ asset('images/pump_logo.png') }}" alt="Injection Logo"  style="display: inline-block;"/>
     <div style="display: inline-block; vertical-align: top; " >
-        <form action="../encounter/telephonePump.php" method="get">
+        <form action="{{ path('patient_call', {'callType':'Received', 'treatmentType':'pump', 'patientId':'9999'}) }}" method="get">
             <button class="dialog-button" type="submit" value="12345" name="patientId">Call Received</button>
-            <input type="hidden" name="callType" value="Received" />
         </form>
-        <form action="../encounter/telephonePump.php" method="get">
+        <form action="{{ path('patient_call', {'callType':'Initiated', 'treatmentType':'pump', 'patientId':'9998'}) }}" method="get">
             <button class="dialog-button" type="submit" value="12345" name="patientId">Call Initiated</button>
-            <input type="hidden" name="callType" value="Initiated" />
         </form>
     </div>
     <br/>
@@ -16,13 +14,11 @@
     <h2>Patient uses injections</h2>
     <img src="{{ asset('images/injection_logo.png') }}" alt="Injection Logo" style="display: inline-block;"/>
     <div style="display: inline-block; vertical-align: top; " >
-        <form action="../encounter/telephoneInjections.php" method="get">
+        <form action="{{ path('patient_call', {'callType':'Received', 'treatmentType':'injections', 'patientId':'9997'}) }}" method="get">
             <button class="dialog-button" type="submit" value="12345" name="patientId">Call Received</button>
-            <input type="hidden" name="callType" value="Received" />
         </form>
-        <form action="../encounter/telephoneInjections.php" method="get">
+        <form action="{{ path('patient_call', {'callType':'Initiated', 'treatmentType':'injections', 'patientId':'9996'}) }}" method="get">
             <button class="dialog-button" type="submit" value="12345" name="patientId">Call Initiated</button>
-            <input type="hidden" name="callType" value="Initiated" />
         </form>
     </div>
 </div>

@@ -2,10 +2,10 @@
     <h2>Patient uses a pump</h2>
     <img src="{{ asset('images/pump_logo.png') }}" alt="Injection Logo"  style="display: inline-block;"/>
     <div style="display: inline-block; vertical-align: top; " >
-        <form action="{{ path('patient_review', {'reviewType':'routine', 'treatmentType':'pump', 'patientId':'0'}) }}" method="get">
+        <form action="{{ path('patient_review', {'reviewType':'routine', 'treatmentType':'pump', 'patientId':'9999'}) }}" method="get">
             <button class="dialog-button" type="submit" value="12345" name="patientId">New Routine Visit</button>
         </form>
-        <form action="../encounter/annualReview.php" method="get">
+        <form action="{{ path('patient_review', {'reviewType':'annual', 'treatmentType':'pump', 'patientId':'9998'}) }}" method="get">
             <button class="dialog-button" type="submit" value="12345" name="patientId">Annual Review</button>
         </form>
     </div>
@@ -14,10 +14,10 @@
     <h2>Patient uses injections</h2>
     <img src="{{ asset('images/injection_logo.png') }}" alt="Injection Logo" style="display: inline-block;"/>
     <div style="display: inline-block; vertical-align: top; " >
-        <form action="../encounter/routineVisitInjections.php" method="get">
+        <form action="{{ path('patient_review', {'reviewType':'routine', 'treatmentType':'injections', 'patientId':'9997'}) }}" method="get">
             <button class="dialog-button" type="submit" value="12345" name="patientId">New Routine Visit</button>
         </form>
-        <form action="../encounter/annualReviewInjections.php" method="get">
+        <form action="{{ path('patient_review', {'reviewType':'annual', 'treatmentType':'injections', 'patientId':'9996'}) }}" method="get">
             <button class="dialog-button" type="submit" value="12345" name="patientId">Annual Review</button>
         </form>
     </div>

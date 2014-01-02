@@ -8,21 +8,26 @@ require_once('/../common/header.php');
 ?>
 <article id="PatientSummary" class="body">
     <header>
-        <h2>Admission for Ketoacidosis</h2>
+        <h2>Other Admission</h2>
     </header>
     <?php require('/../common/patientBoard.php');?>
 </article>
 <br/>
 <article id="AdmissionDetails" class="body">
     <section>
-        <form id="admissionForm" action="../patientDetails/patientDetails.php" method="post">
+        <form id="admissionForm" action="../../../../../../../pages/patientDetails/patientDetails.php" method="post">
             <fieldset class="formOne">
                 <fieldset class="withBorder">
                     <legend>Admission Details</legend>
+                    <label class="wideLabel">Type of Admission:</label>
+                    <select>
+                        <option selected>Other</option>
+                        <option>Intercurrent illness</option>
+                        <option>Surgical procedure</option>
+                        <option>Stabilisation/reeducation</option>
+                    </select>
+                    <br/>
                     <label class="wideLabel">Date of Admission:</label><input type="date"/><br/>
-                    <label class="wideLabel">pH:</label><input type="text"/><br/>
-                    <label class="wideLabel">Ketone Levels:</label><input type="text" value="0"/><br/>
-                    <label class="wideLabel">Serum Levels:</label><input type="text" value="0"/><br/>
                     <label class="wideLabel">Date of Discharge:</label><input type="date"/><br/>
                 </fieldset>
                 <br/>

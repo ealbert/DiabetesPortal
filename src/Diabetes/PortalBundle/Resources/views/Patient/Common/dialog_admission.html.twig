@@ -1,11 +1,11 @@
 <div id="dialog-admission" title="Create a new admission" style="display: none;">
-    <form action="../admission/admit_ketoacidosis.php" method="get" style="text-align: center;">
+    <form action="{{ path('patient_admission', {'admissionType':'ketoacidosis', 'patientId':'9999'}) }}" method="get" style="text-align: center;">
         <button class="dialog-button" type="submit" value="12345" name="patientId">DKA Admission</button>
     </form>
-    <form action="../admission/admit_sh.php" method="get" style="text-align: center;">
+    <form action="{{ path('patient_admission', {'admissionType':'sh', 'patientId':'9998'}) }}" method="get" style="text-align: center;">
         <button class="dialog-button" type="submit" value="12345" name="patientId">Severe Hypo Admission</button>
     </form>
-    <form action="../admission/admit_other.php" method="get" style="text-align: center;">
+    <form action="{{ path('patient_admission', {'admissionType':'other', 'patientId':'9997'}) }}" method="get" style="text-align: center;">
         <button class="dialog-button" type="submit" value="12345" name="patientId">Other Admission</button>
     </form>
 </div>

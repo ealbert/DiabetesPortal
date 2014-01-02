@@ -30,6 +30,14 @@ patient_review:
     pattern: /patient/encounter/review/{reviewType}/{treatmentType}/{patientId}
     defaults: { _controller: PortalBundle:Patient/PatientEncounter:review }
 
+patient_call:
+    pattern: /patient/encounter/call/{callType}/{treatmentType}/{patientId}
+    defaults: { _controller: PortalBundle:Patient/PatientEncounter:telephoneCall }
+
+patient_admission:
+    pattern: /patient/admission/{admissionType}/{patientId}
+    defaults: { _controller: PortalBundle:Patient/PatientAdmission:admission }
+
 portal_login:
     pattern: /login
     defaults: { _controller: PortalBundle:Security:login }

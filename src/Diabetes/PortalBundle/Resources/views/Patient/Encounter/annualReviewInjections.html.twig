@@ -1,6 +1,6 @@
 {% extends 'PortalBundle::base.html.twig' %}
 {% block title %}
-    Diabetes Portal - Routine Review
+    Diabetes Portal - Annual Review
 {% endblock %}
 {% block header_styles %}
     <link href="{{ asset('css/review.css') }}" rel="stylesheet" type="text/css">
@@ -13,8 +13,8 @@
 {% block body %}
     <article id="PatientSummary" class="body">
         <header>
-            <img src="{{ asset('images/pump_logo_36.png') }}" alt="Pump Logo" style="float: right;"/>
-            <h2>Routine Visit (Pump)</h2>
+            <img src="{{ asset('images/injection_logo_36.png') }}" alt="Pump Logo" style="float: right;"/>
+            <h2>Annual Review (Injections)</h2>
             <div style="clear: both;"/>
         </header>
         {{ include('PortalBundle:Patient/Common:patient_summary.html.twig') }}
@@ -29,10 +29,11 @@
                     <div id="reviewMenu"class="jqueryslidemenu">
                         <ul>
                             <li><a href="#" onclick="showForm(event, 'doc_main_form')" class="currentForm">Review Notes</a></li>
-                            <li><a href="#" onclick="showForm(event, 'doc_pump_metrics')">Pump</a></li>
+                            <li><a href="#" onclick="showForm(event, 'doc_injection_form')">Injections</a></li>
                             <li><a href="#" onclick="showForm(event, 'doc_carb_ratios')">Carb. Ratios</a></li>
                             <li><a href="#" onclick="showForm(event, 'nurse_notes')">Nurse Notes</a></li>
                             <li><a href="#" onclick="showForm(event, 'dietitian_notes')">Dietitian Notes</a></li>
+                            <li><a href="#" onclick="showForm(event, 'doc_annual_notes')">Annual Notes</a></li>
                             <li><a href="#" onclick="showForm(event, 'doc_review_comments')">Comments</a></li>
                         </ul>
                         <br style="clear: left" />
@@ -41,8 +42,8 @@
                 <fieldset id="doc_main_form" class="reviewSubForm">
                     {{ include('PortalBundle:Patient/Encounter:doc_main_form.html.twig') }}
                 </fieldset>
-                <fieldset id="doc_pump_metrics" style="display: none;" class="reviewSubForm">
-                    {{ include('PortalBundle:Patient/Encounter:doc_pump_metrics.html.twig') }}
+                <fieldset id="doc_injection_form" style="display: none;"  class="reviewSubForm">
+                    {{ include('PortalBundle:Patient/Encounter:doc_injection_form.html.twig') }}
                 </fieldset>
                 <fieldset id="doc_carb_ratios" style="display: none;" class="reviewSubForm">
                     {{ include('PortalBundle:Patient/Encounter:doc_carb_ratios.html.twig') }}
@@ -52,6 +53,9 @@
                 </fieldset>
                 <fieldset id="dietitian_notes" style="display: none;" class="reviewSubForm">
                     {{ include('PortalBundle:Patient/Encounter:dietitian_notes.html.twig') }}
+                </fieldset>
+                <fieldset id="doc_annual_notes" class="reviewSubForm" style="display: none;">
+                    {{ include('PortalBundle:Patient/Encounter:doc_annual_notes.html.twig') }}
                 </fieldset>
                 <fieldset id="doc_review_comments" style="display: none;" class="reviewSubForm">
                     {{ include('PortalBundle:Patient/Encounter:doc_review_comments.html.twig') }}<s></s>
