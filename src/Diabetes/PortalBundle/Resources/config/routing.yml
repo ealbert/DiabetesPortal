@@ -38,6 +38,10 @@ patient_admission:
     pattern: /patient/admission/{admissionType}/{patientId}
     defaults: { _controller: PortalBundle:Patient/PatientAdmission:admission }
 
+patient_create:
+    pattern: /patient/create
+    defaults: { _controller: PortalBundle:Patient/PatientCreate:createNewPatient }
+
 portal_login:
     pattern: /login
     defaults: { _controller: PortalBundle:Security:login }
