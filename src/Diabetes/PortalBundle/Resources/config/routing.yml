@@ -26,6 +26,10 @@ patient_chart:
     pattern:  /patient/chart/{id}
     defaults: { _controller: PortalBundle:Patient/PatientCommon:getChart }
 
+patient_review_pdf:
+    pattern: /patient/encounter/review/pdf/{patientId}
+    defaults: { _controller: PortalBundle:Patient/PatientCommon:getReviewPdf }
+
 patient_review:
     pattern: /patient/encounter/review/{reviewType}/{treatmentType}/{patientId}
     defaults: { _controller: PortalBundle:Patient/PatientEncounter:review }
@@ -41,6 +45,7 @@ patient_admission:
 patient_create:
     pattern: /patient/create
     defaults: { _controller: PortalBundle:Patient/PatientCreate:createNewPatient }
+
 
 portal_login:
     pattern: /login
