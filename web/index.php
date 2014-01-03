@@ -1,2 +1,2 @@
 <?php
-echo("<script>location.href='app_dev.php'</script>");
+echo("<script>location.href='app_dev.php/user'</script>");
