@@ -9,6 +9,7 @@ exitWithMessageOnError () {
   fi
 }
 
+echo Checking If Composer is available
 # Prerequisites
 if [ ! -f composer.phar ];
 then
@@ -17,6 +18,7 @@ then
 fi
 
 # Verify node.js installed
+echo Checking If Node is available
 hash node 2> /dev/null
 exitWithMessageOnError "Missing node.js executable, please install node.js, if already installed make sure it can be reached from current environment."
 
@@ -27,6 +29,7 @@ ARTIFACTS=$SCRIPT_DIR/artifacts
 if [[ ! -n "$DEPLOYMENT_SOURCE" ]]; then
   # This normally exists
   DEPLOYMENT_SOURCE=$SCRIPT_DIR
+  echo Deployment source "$SCRIPT_DIR"
 fi
 
 if [[ ! -n "$NEXT_MANIFEST_PATH" ]]; then
@@ -57,11 +60,13 @@ fi
 export SYMFONY_ENV=prod
 
 cd "$DEPLOYMENT_SOURCE"
+echo Executing Composer
 # Invoke Composer, but without the scripts section because subprocesses don't have the correct user and permissions
 "D:\Program Files (x86)\PHP\v5.4\php.exe" composer.phar install --prefer-dist -v --no-scripts
 # Invoke the scripts section here manually, using right user and permissions
 "D:\Program Files (x86)\PHP\v5.4\php.exe" vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/bin/build_bootstrap.php
 "D:\Program Files (x86)\PHP\v5.4\php.exe" app/console cache:clear
+"D:\Program Files (x86)\PHP\v5.4\php.exe" app/console update
 "D:\Program Files (x86)\PHP\v5.4\php.exe" app/console assets:install web/
 
 echo Handling Basic Web Site deployment.
