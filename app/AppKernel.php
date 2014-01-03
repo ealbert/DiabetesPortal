@@ -2,8 +2,9 @@
 
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
+use WindowsAzure\DistributionBundle\HttpKernel\AzureKernel;
 
-class AppKernel extends Kernel
+class AppKernel extends AzureKernel // Azure: kernel was replaced
 {
     public function registerBundles()
     {
@@ -17,6 +18,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Diabetes\PortalBundle\PortalBundle(),
+            new \WindowsAzure\DistributionBundle\WindowsAzureDistributionBundle() // Azure: this bundle was added
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
